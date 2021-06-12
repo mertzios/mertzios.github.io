@@ -1,0 +1,607 @@
+<html>
+
+<head>
+<title>Algorithmic Aspects of Temporal Graphs II -- ICALP 2019 workshop</title>
+</head>
+
+<body style="max-width: 75%; margin: auto;">
+
+	<center><p style="font-size:40px"><strong>Algorithmic Aspects of Temporal Graphs II*</strong></p>
+	
+	<p style="font-size:30px">Satellite workshop of <a target="_blank" href="https://icalp2019.upatras.gr/">ICALP 2019</a><br>	
+	Patras, Greece<br>
+	Monday 8 July 2019</p>
+	</center>
+
+	
+<!-- _____________ TOPIC _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Topic</strong></p>
+
+<ul><p style="font-size:20px">
+In modern systems the classical modeling paradigm using static graphs may be restrictive or oversimplifying, 
+as the interactions among the elementary system units usually change over time in a highly dynamic manner. 
+For example, friendships are added and removed over time in a social network and 
+links in a communication network may change dynamically, 
+either according to a specific known pattern (satellites following a trajectory) 
+or in an unpredictable manner (mobile ad hoc networks). 
+The common characteristic in all these application areas is that the system structure, 
+i.e. graph topology, is subject to <i>discrete changes over time</i>. 
+In such dynamically changing graphs the notion of <i>vertex adjacency</i> needs to be 
+revisited and various graph concepts, e.g. reachability and connectedness, now crucially 
+depend on the exact <i>temporal ordering</i> of the edges' presence.<br><br>
+
+
+A temporal graph is a graph that changes over time. Assuming discrete time and a fixed set V of vertices, 
+a temporal graph can be viewed as a discrete sequence G<sub>1</sub>, G<sub>2</sub>, ... of static graphs, each with vertex set V. 
+
+Many notions and algorithms from the static case can be naturally transferred in a meaningful way 
+to their temporal counterpart, while in other cases new approaches are needed to define the 
+appropriate temporal notions. In particular, some problems become radically different and 
+substantially more difficult when the time dimension is additionally taken into account.<br><br>
+
+
+In this one-day workshop, recent advances in the area of temporal / dynamically changing graphs will be presented, as well as some of the key challenges will be highlighted. 
+As this research area grows and broadens, our aim is to bring together people from theoretical and practical communities of temporal graphs in order to establish new and strengthen existing links between these communities.<br><br>
+
+
+Presentations are given by invitation only. Everyone is welcome to register and attend.
+</p></ul>
+ 
+ 
+ 
+ <!-- _____________ Practical information _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Practical information</strong></p>
+
+<ul><p style="font-size:20px">
+  Every presentation is given 25 minutes in total, which is expected to be 20 minutes of talk and 5 minutes of questions. 
+  The presentations are grouped into four sessions (two in the morning and two in the afternoon). 
+  Details of the invited speakers and the schedule can be found below. A participant can register only to the workshop (Monday 8 July), 
+  or to both the workshop and the conference (Monday 8 July to Friday 12 July). Early registration is until 31 May.<br><br>
+  
+  Full information about the registration to the workshop and/or the conference, as well as about accommodation, is given here: 
+<a target="_blank" href="https://icalp2019.upatras.gr/regis.php">https://icalp2019.upatras.gr/regis.php</a><br><br>
+</p></ul>
+
+
+
+ 
+
+<!-- _____________ Invited speakers _____________ -->
+
+<!--
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Invited speakers</strong></p>
+
+<ul style="font-size:20px">
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.linkedin.com/in/prithwishbasu/">Prithwish Basu</a> (Raytheon BBN Technologies, USA)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.labri.fr/perso/acasteig/">Arnaud Casteigts</a> (LaBRI and University of Bordeaux, France)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://sites.google.com/view/deligkas/home">Argyrios Deligkas</a> (University of Liverpool, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.cs.le.ac.uk/people/te17/">Thomas Erlebach</a> (University of Leicester, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.cs.uoi.gr/~kontog/">Spyros Kontogiannis</a> (University of Ioannina, Greece)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.ise.bgu.ac.il/engineering/PersonalWebsite1Publications.aspx?id=dVjrtdtM&c=1">Zwi Lotker</a> (Ben-Gurion University of the Negev, Israel)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.dcs.gla.ac.uk/~kitty/">Kitty Meeks</a> (University of Glasgow, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.mat.uniroma2.it/~pasquale/">Francesco Pasquale</a> (Tor Vergata University of Rome, Italy)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://scholar.google.com/citations?user=x5_c85IAAAAJ&hl=en">Marco Piangerelli</a> (University of Camerino, Italy)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=200978">Malte Renken</a> (TU Berlin, Germany)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.aalto.fi/en/people/polina-rozenshtein">Polina Rozenshtein</a> (Aalto University, Finland)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://people.scs.carleton.ca/~santoro/">Nicola Santoro</a> (Carleton University, Canada)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.amitabhtrehan.net/">Amitabh Trehan</a> (Loughborough University, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.ceid.upatras.gr/webpages/faculty/zaro/">Christos Zaroliagis</a> (University of Patras, Greece)</li>
+</ul>
+-->
+
+
+
+
+<!-- _____________ SCHEDULE _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<!-- 
+<p style="font-size:20px"><strong>Workshop Schedule (tentative) and List of Speakers</strong></p>
+ -->
+
+<p style="font-size:20px"><strong>Workshop Schedule (tentative)</strong></p>
+
+<ul>
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 40px;}
+  .tg td{font-size:20px;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg th{font-size:20px;font-weight:normal;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg .tg-5pt6{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd{border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd-b{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top;text-align:center}
+  </style>
+  <table class="tg">
+    <tr>
+      <th class="tg-5pt6"><strong>Time</strong></th>
+      <th class="tg-5pt6"><strong>Talk</strong></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:30-9:55</th>
+      <td class="tg-pesd"><a target="_blank" href="http://www.dcs.gla.ac.uk/~kitty/"><strong>Kitty Meeks</strong></a> (University of Glasgow, UK) 
+	  <a target="_blank" href="./Workshop-Slides/01-Meeks-09-30_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#meeks">Optimising reachability by reordering</a></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:55-10:20</td>
+      <td class="tg-pesd"><a target="_blank" href="https://sites.google.com/view/deligkas/home"><strong>Argyrios Deligkas</strong></a> (University of Liverpool, UK) 
+	  <a target="_blank" href="./Workshop-Slides/02-Deligkas-09-55_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#deligkas">On minimizing/maximizing reachability sets in temporal graphs by independent time delays</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">10:20-10:45</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.ceid.upatras.gr/webpages/faculty/zaro/"><strong>Christos Zaroliagis</strong></a> (University of Patras, Greece)
+	  <a target="_blank" href="./Workshop-Slides/03-Zaroliagis-10-20_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#zaroliagis">Multimodal dynamic journey planning</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd-b" style=''text-align: center;''>10:45-11:15</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">11:15-11:40</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.cs.le.ac.uk/people/te17/"><strong>Thomas Erlebach</strong></a> (University of Leicester, UK)
+	  <a target="_blank" href="./Workshop-Slides/04-Erlebach-11-15_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#erlebach">A game of cops and robbers on graphs with periodic edge-connectivity</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">11:40-12:05</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.labri.fr/perso/acasteig/"><strong>Arnaud Casteigts</strong></a> (LaBRI and University of Bordeaux, France)
+	  <a target="_blank" href="http://www.labri.fr/perso/acasteig/files/sparsification-techniques.pdf">[slides]</a>
+	  </br><a href="#casteigts">A few sparsification techniques preserving temporal connectivity</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">12:05-12:30</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.cs.uoi.gr/~kontog/"><strong>Spyros Kontogiannis</strong></a> (University of Ioannina, Greece)
+	  <a target="_blank" href="./Workshop-Slides/06-Kontogiannis-12-05_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#kontogiannis">Exploring earliest-arrival paths in large-scale, time-dependent networks via combinatorial oracles</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">12:30-12:55</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.mat.uniroma2.it/~pasquale/"><strong>Francesco Pasquale</strong></a> (Tor Vergata University of Rome, Italy)
+	  <a target="_blank" href="./Workshop-Slides/07-Pasquale-12-30_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#pasquale">Self-stabilization and expansion of a simple dynamic random graph model for Bitcoin-like unstructured P2P networks</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd-b">13:00-14:30</td>
+      <td class="tg-pesd-b"><strong>Lunch break</strong></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">14:30-14:55</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=200978"><strong>Malte Renken</strong></a> (TU Berlin, Germany)
+	  <a target="_blank" href="./Workshop-Slides/08-Renken-14-30_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#renken">Comparing temporal graphs with time warping</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">14:55-15:20</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.linkedin.com/in/prithwishbasu/"><strong>Prithwish Basu</strong></a> (Raytheon BBN Technologies, USA)
+	  <a target="_blank" href="./Workshop-Slides/09-Basu-14-55_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#basu">Clustering and summarizing temporal graphs</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">15:20-15:45</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.aalto.fi/en/people/polina-rozenshtein"><strong>Polina Rozenshtein</strong></a> (Aalto University, Finland)
+	  <a target="_blank" href="./Workshop-Slides/10-Rozenshtein-15-20_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#rozenshtein">The network-untangling problem: From interactions to activity timelines</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">15:45-16:10</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.ise.bgu.ac.il/engineering/PersonalWebsite1Publications.aspx?id=dVjrtdtM&c=1"><strong>Zwi Lotker</strong></a> (Ben-Gurion University of the Negev, Israel) 
+	  <a target="_blank" href="./Workshop-Slides/11-Lotker-15-45_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#lotker">The tale of two clocks</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd-b">16:10-16:40</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">16:40-17:05</td>
+      <td class="tg-pesd"><a target="_blank" href="https://scholar.google.com/citations?user=x5_c85IAAAAJ&hl=en"><strong>Marco Piangerelli</strong></a> (University of Camerino, Italy)
+	  <a target="_blank" href="./Workshop-Slides/12-Piangerelli-16-40_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#piangerelli">TDA and Persistent Homology: a new method for analysing temporal graphs</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">17:05-17:30</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.amitabhtrehan.net/"><strong>Amitabh Trehan</strong></a> (Loughborough University, UK)
+	  <a target="_blank" href="./Workshop-Slides/13-Trehan-17-05_ICALP-2019.pdf">[slides]</a>
+	  </br><a href="#trehan">Temporal evolution of self-healing graphs</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">17:30-17:55</td>
+      <td class="tg-pesd"><a target="_blank" href="http://people.scs.carleton.ca/~santoro/"><strong>Nicola Santoro</strong></a> (Carleton University, Canada)
+	  <a target="_blank" href="./Workshop-Slides/14-Santoro-17-30_ICALP-2019.pps">[slides]</a>
+	  </br><a href="#santoro">On infinity, continuity, regularity, and time-varying graphs</a></td>
+    </tr>
+  </table>
+  </ul>
+
+
+
+<p style="font-size:20px"><strong>Abstracts</strong></p>
+
+<ul style="list-style-type: none;">
+  <li style="margin-bottom:-0.3cm" id="meeks"><p style="font-size:20px"><strong>Kitty Meeks</strong> (University of Glasgow, UK) 
+  <a target="_blank" href="./Workshop-Slides/01-Meeks-09-30_ICALP-2019.pdf">[slides]</a>
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>Optimising reachability by reordering</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>The concept of reachability (i.e. which vertices in a graph can be reached by travelling along edges from a given starting vertex) 
+    is central to many applications, including the dissemination of information or the spread of disease through a network. 
+    Depending on the application, it might be desirable to increase or decrease the number of vertices that are reachable from any one starting vertex. 
+    In most applications, time plays a crucial role: each contact between individuals, represented by an edge, will only occur at certain time(s). 
+    The relative timing of edges is clearly crucial in determining the reachability of any vertex in the graph.
+    <br><br>
+
+    In the static setting, there has been a significant body of work addressing how graph modifications 
+    (typically the insertion and/or deletion of vertices and/or edges) can be used to increase or decrease the number of vertices reachable from a single starting vertex.  
+    While these notions are still relevant in the temporal setting, we can also consider a different kind of modification in which we do not modify the underlying graph 
+    but instead change the relative temporal ordering of the edges.  This kind of modification - in which only the timing of certain contacts is changed - is potentially 
+    more feasible to carry out on real networks in practice (we consider, for example, the feasibility of re-ordering the trades that give rise to a contact network between 
+    livestock) than modifications that completely remove certain edges; the model becomes more realistic still if we allow for some restrictions on how this rescheduling 
+    can be done (e.g. only certain times are permitted, or specified pairs of edges must be active simultaneously).
+    <br><br>
+    
+    At the 2018 workshop, Jessica Enright and myself reported on some initial results in this setting (almost all of which demonstrated intractability).  
+    In this talk I will provide updates on some more recent progress, including both stronger hardness results and some positive results for special cases, 
+    as well as discussing several promising directions for future work.<br><br>
+  
+    This is joint work with Jessica Enright and Fiona Skerman.</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="deligkas"><p style="font-size:20px"><strong>Argyrios Deligkas</strong> (University of Liverpool, UK)
+	<a target="_blank" href="./Workshop-Slides/02-Deligkas-09-55_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>On minimizing/maximizing reachability sets in temporal graphs by independent time delays</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>A temporal graph is the variant of a dynamic graph, where a set of pairwise relations between objects is not permanent and can be changed in discrete time steps. 
+      In this paper we study how the changes of the time labels (e.g. corresponding to global delays) for a given temporal graph can effect its (temporal) connectivity 
+      estimating the size of the reachability sets from given sources. These reachability questions have been motivated by the applications of the temporal graphs to model 
+      various disease-spreading contact networks or supply networks in manufacturing. In particular we analyze the mechanisms of independent delays implemented by merging 
+      operations and show that finding the optimal set of delays with different minimization and maximization reachability objectives is NP-hard even for very simple graph 
+      structures. We provide several new encodings of satisfiability questions into the realm of temporal graphs and independent delays that reveal various new mechanisms 
+      of controlling reachability sets in indirect way.
+
+      <br><br>
+
+      This is joint work with Igor Potapov.
+    </i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+  
+
+    <li style="margin-bottom:-0.3cm" id="zaroliagis"><p style="font-size:20px"><strong>Christos Zaroliagis</strong> (University of Patras, Greece)
+	<a target="_blank" href="./Workshop-Slides/03-Zaroliagis-10-20_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Multimodal dynamic journey planning</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>Timetable information systems of multimodal public (schedule-based) transport networks can be
+      represented by a suitable directed graph model, whose arcs are associated with travel times.
+      The graph may change over time as delays of public transport vehicles inevitably occur.
+      Two key routines in timetable information systems are (i) the efficient update the timetable
+      information in case of delays, and (ii) the real-time computation of multimodal journey
+      planning queries. In this work, we present multimodal DTM, a new model for multimodal journey
+      planning in public (schedule-based) transport networks. Multimodal DTM constitutes an
+      extension of the dynamic timetable model (DTM), developed originally for unimodal journey
+      planning. Multimodal DTM exhibits a very fast query algorithm, meeting the request for
+      real-time response to best journey queries and an extremely fast update algorithm for updating
+      the timetable information in case of delays. In particular, an experimental study on
+      real-world metropolitan networks demonstrates that our methods compare favorably with
+      other state-of-the-art approaches when public transport along with unrestricted with
+      respect to departing time traveling (walking and electric vehicles) is considered.
+    </i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="erlebach"><p style="font-size:20px"><strong>Thomas Erlebach</strong> (University of Leicester, UK)
+	<a target="_blank" href="./Workshop-Slides/04-Erlebach-11-15_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>A game of cops and robbers on graphs with periodic edge-connectivity</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>We consider a game in which a single cop and a single robber take turns moving along the edges of a given graph G. 
+      If there exists a strategy for the cop which enables it to be positioned at the same vertex as the robber eventually, 
+      then G is called cop-win, and robber-win otherwise. We study this classical combinatorial game in a novel context, 
+      broadening the class of potential game arenas to include the edge-periodic graphs. 
+      These are graphs with an infinite lifetime comprised of discrete time steps such that each edge e is assigned a bit pattern of length 
+      l<sub>e</sub>, with a 1 in the i-th position of the pattern indicating the presence of edge e in the i-th step of each consecutive block of 
+      l<sub>e</sub> steps. Utilising the existing framework of reachability games, we obtain, amongst other results, an O(LCM(L) * n<sup>3</sup>) 
+      upper bound on the time required to decide if a given n-vertex edge-periodic graph is cop or robber win as well as compute a strategy for the winning player 
+      (here, L is the set of all edge pattern lengths l<sub>e</sub>, and LCM(L) denotes the least common multiple of the set L). We also prove an upper bound of 8*k*LCM(L) 
+      on the length that is sufficient to ensure that an edge-periodic cycle is robber win, where k = 1 if LCM(L) &ge; 2*max(L), and k=2 otherwise. 
+      
+      <br><br>
+
+      This is joint work with Jakob T. Spooner.
+
+    </i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+    <li style="margin-bottom:-0.3cm" id="casteigts"><p style="font-size:20px"><strong>Arnaud Casteigts</strong> (LaBRI and University of Bordeaux, France)
+	<a target="_blank" href="http://www.labri.fr/perso/acasteig/files/sparsification-techniques.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>A few sparsification techniques preserving temporal connectivity</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>In this talk, I will present some techniques for removing edges from a temporal graph without breaking its temporal connectivity. 
+      These techniques were recently used to obtain sparse spanners in a class of dense temporal graphs whose schedule is adversarial, 
+      the very existence of such spanners being open before (ICALP 2019, joint work with J. Peters and J. Schoeters). 
+      The presented techniques are 1) delegation and k-hop delegation, 2) dismountability, 3) forward and backward fireworks, and 4) pivotability. 
+      Some of these techniques seem specific to the case of complete graphs, while some others may be more widely applicable.
+    </i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+	
+	<li style="margin-bottom:-0.3cm" id="kontogiannis"><p style="font-size:20px"><strong>Spyros Kontogiannis</strong> (University of Ioannina, Greece)
+	<a target="_blank" href="./Workshop-Slides/06-Kontogiannis-12-05_ICALP-2019.pdf">[slides]</a>
+	<br>
+  </p>
+  <p style="font-size:20px"><strong>Exploring earliest-arrival paths in large-scale, time-dependent networks via combinatorial oracles</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+<i>A novel landmark-based oracle (CFLAT) is designed, analyzed and engineered, for providing earliest-arrival-time routes in time-dependent road networks. 
+The preprocessesed information consists of combinatorial structures (i.e., collections of time-stamped min-travel-time-path trees) rather than approximations 
+of travel-time functions. This information is then exploited by a novel query algorithm (CFCA) which computes (and has to pay for it) the actual 
+connecting path that preserves the theoretical approximation guarantees.  A thorough experimental evaluation on two real-world benchmark instances, 
+as well as a typical synthetic benchmark, shows that CFLAT achieves significant improvements on the preprocessing requirements, approximation guarantee 
+and query-time for providing earliest-arrival-time paths, in comparison to previous landmark-based oracles. It also achieves competitive query-time performance, 
+compared to state-of-art speedup heuristics for time-dependent road networks, whose query-times in most cases do not account for path construction.
+  </i></p></li>
+  
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+  <li style="margin-bottom:-0.3cm" id="pasquale"><p style="font-size:20px"><strong>Francesco Pasquale</strong> (Tor Vergata University of Rome, Italy)
+  <a target="_blank" href="./Workshop-Slides/07-Pasquale-12-30_ICALP-2019.pdf">[slides]</a>
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>Self-stabilization and expansion of a simple dynamic random graph model for 
+      Bitcoin-like unstructured P2P networks</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong>
+    <i>The Bitcoin P2P network is formed by thousands of nodes running the Bitcoin
+    protocol. While the nodes participating in the network are mostly known, the
+    peer discovery process in the protocol is explgicitly designed to hide the
+    global network structure.
+
+    <br><br>
+
+    In this talk we present a simple dynamic random graph model inspired by the
+    peer discovery process in the Bitcoin protocol and we analyze its robustness
+    with respect to self-stabilization and expansion: We show that the network
+    dynamics quickly converges to a stable random graph that turns out to be a good
+    expander, with high probability.
+    
+    <br><br>
+
+    Based on a joint work with Luca Becchetti, Andrea Clementi, Emanuele Natale, and Luca Trevisan.
+
+  </i></p></li>
+  
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+
+    <li style="margin-bottom:-0.3cm" id="renken"><p style="font-size:20px"><strong>Malte Renken</strong> (TU Berlin, Germany)
+	<a target="_blank" href="./Workshop-Slides/08-Renken-14-30_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Comparing temporal graphs with time warping</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>The connections within many real-world networks change over time,
+      leading to the study of so-called temporal graphs. Recognizing patterns
+      in these requires a similarity measure to compare different temporal
+      graphs. To this end, we propose an approach using dynamic time warping
+      (an established concept in the context of time series). The resulting
+      measure is called the temporal graph warping distance.
+      Finally, we talk about the hardness of computing this distance, give
+      ways to get around it, and show some examples involving real-world data.
+      
+      <br><br>
+
+      Based on joint work with Vincent Froese, Brijnesh Jain and Rolf Niedermeier.
+    </i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="basu"><p style="font-size:20px"><strong>Prithwish Basu</strong> (Raytheon BBN Technologies, USA)
+	<a target="_blank" href="./Workshop-Slides/09-Basu-14-55_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Clustering and summarizing temporal graphs</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>Real-world networks and processes running on them typically evolve over time and can be naturally modeled as temporal graphs. 
+      Detecting the existence of significant groups of nodes over space and time may reveal important information about the network's function. 
+      We will discuss three diverse methods to address this challenge: (1) detection of spatio-temporal clusters using tensor-decomposition; 
+      (2) detection of significant node-valued clusters in temporal graphs using graph-convolution neural networks; and 
+      (3) application of tools from topological data analysis for summarizing temporal graphs. 
+      We will also discuss real-world applications of these methods.
+    </i></p></li>
+
+    
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="rozenshtein"><p style="font-size:20px"><strong>Polina Rozenshtein</strong> (Aalto University, Finland)
+	<a target="_blank" href="./Workshop-Slides/10-Rozenshtein-15-20_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>The network-untangling problem: From interactions to activity timelines</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>We introduce and a novel problem formulation for summarizing temporal networks. 
+      The inferred network summary has the form of an activity timeline over network entities. 
+      In particular, we consider a set of entities V and a sequence of time-stamped edges E among the entities. 
+      Each edge (u, v, t) &#8714; E denotes an interaction between entities u and v that takes place at time t. 
+      Then we assume a simple activity model in which each entity can be active during at most k time intervals. 
+      An interaction (u, v, t) can be explained if at least one of the two entities, u or v, is active at time t. 
+      Our goal is to reconstruct the activity intervals for all entities in the network so as to explain all observed interactions. 
+      We seek parsimonious models and activity intervals with minimum length. The resulting problem is refer to as the network-untangling problem.
+      We provide two formulations of the network-untangling problem: (i) minimizing the total activity interval length (sum version), 
+      and (ii) minimizing the maximum activity interval length (max version). We study separately the two problems for k = 1 and k > 1 activity intervals per entity. 
+      For the single activity-interval model (where k = 1), we show that the sum problem is NP-hard, while, surprisingly, the max problem can be solved optimally 
+      in linear time, using a mapping to 2-SAT. For the sum problem we provide efficient algorithms motivated by realistic assumptions. 
+      For the case of k > 1 activity intervals per entity, we show that both formulations are inapproximable. However, we propose efficient algorithms. 
+      We complement our study with evaluation on synthetic and real-world datasets, which demonstrates the validity of the proposed problem definitions and the good 
+      performance of our algorithms.<br><br>
+
+      This is joint work with Nikolaj Tatti and Aristides Gionis.
+    </i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+	<li style="margin-bottom:-0.3cm" id="lotker"><p style="font-size:20px"><strong>Zwi Lotker</strong> (Ben-Gurion University of the Negev, Israel)
+	<a target="_blank" href="./Workshop-Slides/11-Lotker-15-45_ICALP-2019.pdf">[slides]</a>
+	<br>
+  </p>
+  <p style="font-size:20px"><strong>The tale of two clocks</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+<i>It is common knowledge that people perceive time differently in different situations. However, when studying dynamic networks, 
+there is always a single time (single clock). The talk will explain how to incorporate time perceptions into the basic model of 
+dynamic networks by using different clocks.<br><br>
+
+The talk is based on the paper "The tale of two clocks", published at ASONAM 2016.
+  </i></p></li>
+
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+
+  <li style="margin-bottom:-0.3cm" id="piangerelli"><p style="font-size:20px"><strong>Marco Piangerelli</strong> (University of Camerino, Italy)
+  <a target="_blank" href="./Workshop-Slides/12-Piangerelli-16-40_ICALP-2019.pdf">[slides]</a>
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>TDA and Persistent Homology: a new method for analysing temporal graphs</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+    <i>Temporal networks are a mathematical model to represent correlations (interactions) evolving over time. 
+      <br><br>
+      Topological Data Analysis (TDA) is a framework that allows one to examine data across multiple scales in a robust and mathematically 
+      established manner and, via Persistent Homology (PH) to extract the topological invariants. 
+      So far, these methods were employed with static graphs in order to provide a summary of topological features, but applications to temporal 
+      networks have never been studied in detail. Among the main features of TDA it is possible to mention that the analysis is metric-free 
+      and the data set has to be presented, almost every time, as a graph or as a point cloud. We investigate applications of TDA and PH to 
+      dynamically generated graphs using a tool developed by our group: CholeR. 
+      <br><br>
+      That tool allows to generate different kind of networks and then using TDA equipped with a particular filtration, 
+      the clique weighted rank filtration (CWRF), for investigate the main features of the graph. Moreover, CholeR has been used to analyze 
+      the networks derived from real data: a EEG signals of epileptic and non epileptic signals to deriving temporal graphs and temporal simplicial complex.
+
+    <br><br>
+
+    This is joint work with Emanuela Merelli.
+  </i></p></li>
+
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+
+    <li style="margin-bottom:-0.3cm" id="trehan"><p style="font-size:20px"><strong>Amitabh Trehan</strong> (Loughborough University, UK)
+	<a target="_blank" href="./Workshop-Slides/13-Trehan-17-30_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Temporal evolution of self-healing graphs</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>Self-healing is a fault-tolerance paradigm for reconfigurable/peer-to-peer/overlay network/graphs. 
+	Over time, at each adversarial attempt, an adversary deletes a  node or inserts one with edges - the affected nodes respond by locally inserting edges.	
+	The aim is to maintain certain global properties such as diameter, stretch, expansion etc over the whole timeline. In this talk, we discuss some results 
+	and the issues related to analysing self-healing algorithms in the dynamic settings.
+    </i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+  
+    
+
+    <li style="margin-bottom:-0.3cm" id="santoro"><p style="font-size:20px"><strong>Nicola Santoro</strong> (Carleton University, Canada)
+	<a target="_blank" href="./Workshop-Slides/14-Santoro-17-30_ICALP-2019.pps">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>On infinity, continuity, regularity, and time-varying graphs</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>This talk will briefly highlight some important viewpoints,
+      intriguing aspects and interesting issues  in the research
+      on Time-Varying Graphs, which  however are sometimes neglected
+      or unclear. The aim is to stimulate the research attention
+      to these aspects and issues.
+    </i></p></li><br><br>
+
+  
+  
+</ul>
+
+
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<h3><strong>Workshop organizers*</strong></h3>
+
+<ul><p style="font-size:20px">
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="http://community.dur.ac.uk/george.mertzios/">George B. Mertzios</a> (Durham University, UK)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="http://ru1.cti.gr/Paul_Spirakis/">Paul G. Spirakis</a> (University of Liverpool, UK and University of Patras, Greece)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="https://cgi.csc.liv.ac.uk/~akridel">Eleni C. Akrida</a> (University of Liverpool, UK)</p>
+  <li><p style="font-size:20px"><a target="_blank" href="http://victorzamaraev.com/">Viktor Zamaraev</a> (Durham University, UK)</p>
+</p></ul>
+
+<p style="font-size:20px">* Partially supported by the EPSRC grants <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P020372/1">EP/P020372/1</a> 
+and <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P02002X/1">EP/P02002X/1</a>, 
+and by the <a target="_blank" href=https://www.liverpool.ac.uk/network-science-technologies/>EEE/CS University of Liverpool Initiative NeST</a>.</p>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

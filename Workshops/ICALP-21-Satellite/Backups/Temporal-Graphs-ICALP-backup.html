@@ -1,0 +1,696 @@
+<html>
+
+<head>
+<title>Algorithmic Aspects of Temporal Graphs IV -- ICALP 2021 workshop</title>
+</head>
+
+<body style="max-width: 75%; margin: auto;">
+
+	<center><p style="font-size:40px"><strong>Algorithmic Aspects of Temporal Graphs IV*</strong></p>
+	
+	<p style="font-size:30px">Satellite workshop of <a target="_blank" href="http://easyconferences.eu/icalp2021/">ICALP 2021</a><br>	
+	Glasgow, Scotland, UK<br>
+	<!-- Monday 12 July 2020<br>
+	(held online due to the corona pandemic) --> </p>
+	</center>
+
+	
+<!-- _____________ TOPIC _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Topic</strong></p>
+
+<ul><p style="font-size:20px">
+In modern systems the classical modeling paradigm using static graphs may be restrictive or oversimplifying, 
+as the interactions among the elementary system units usually change over time in a highly dynamic manner. 
+For example, friendships are added and removed over time in a social network and 
+links in a communication network may change dynamically, 
+either according to a specific known pattern (satellites following a trajectory) 
+or in an unpredictable manner (mobile ad hoc networks). 
+The common characteristic in all these application areas is that the system structure, 
+i.e. graph topology, is subject to <i>discrete changes over time</i>. 
+In such dynamically changing graphs the notion of <i>vertex adjacency</i> needs to be 
+revisited and various graph concepts, e.g. reachability and connectedness, now crucially 
+depend on the exact <i>temporal ordering</i> of the edges' presence.<br><br>
+
+
+A temporal graph is a graph that changes over time. Assuming discrete time and a fixed set V of vertices, 
+a temporal graph can be viewed as a discrete sequence G<sub>1</sub>, G<sub>2</sub>, ... of static graphs, each with vertex set V. 
+
+Many notions and algorithms from the static case can be naturally transferred in a meaningful way 
+to their temporal counterpart, while in other cases new approaches are needed to define the 
+appropriate temporal notions. In particular, some problems become radically different and 
+substantially more difficult when the time dimension is additionally taken into account.<br><br>
+
+
+In this one-day workshop, recent advances in the area of temporal / dynamically changing graphs will be presented, as well as some of the key challenges will be highlighted. 
+As this research area grows and broadens, our aim is to bring together people from theoretical and practical communities of temporal graphs in order to establish new and strengthen existing links between these communities.<br><br>
+
+
+Presentations are given by invitation only. Everyone is welcome to register and attend.
+</p></ul>
+ 
+ 
+ 
+ 
+
+ 
+ <!-- _____________ Practical information _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Practical information</strong></p>
+
+
+<ul><p style="font-size:20px">
+  Every presentation is given 25 minutes in total, which is expected to be 20 minutes of talk and 5 minutes of questions. 
+  The presentations are grouped into four sessions (two in the morning and two in the afternoon). 
+  Details of the invited speakers and the schedule can be found below.<br><br>
+  
+  <strong>Access to the workshops will be free of charge.</strong> 
+  However, you should first <strong>fill-in the registration form</strong> <br> 
+  (use "2. Free Sign-Up" and check the option "AATG: Algorithmic Aspects of Temporal Graphs (July 7)"): <br>
+  <a target="_blank" href="https://icalp2020.saarland-informatics-campus.de/icalp-registration/">https://icalp2020.saarland-informatics-campus.de/icalp-registration/</a><br><br>
+  
+  The meeting will be hosted on Zoom at the following link (password will be sent to participants): 
+  <a target="_blank" href="https://cs-uni-saarland-de.zoom.us/j/91818652436">zoom meeting</a><br><br>
+
+  
+  We will have the following rules in place for the workshop to run smoothly:<br>
+
+  - Please log in to the Zoom meeting using your REAL NAME and AFFILIATION, e.g. "Eleni Akrida, Durham University" or "Eleni Akrida, Durham".<br>
+  - Please keep your microphone muted unless it is your turn to speak, e.g. if you are the speaker or you are asking a question.<br>
+  - Should you have any questions while a speaker is presenting, please do not interrupt.<br>
+  - Instead, please write "question" in the chat. After the talk is over and it is time for questions, the chair of the session will advise those who have commented to ask their questions.<br><br>
+  
+  Full information about the registration to the main conference (ICALP 2020) <!--as well as about accommodation--> is given here: <br>
+<a target="_blank" href="https://icalp2020.saarland-informatics-campus.de/registration/">https://icalp2020.saarland-informatics-campus.de/registration/</a><br><br>
+</p></ul>
+
+
+
+ 
+
+<!-- _____________ Invited speakers _____________ -->
+
+<!--
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Invited speakers</strong></p>
+
+<ul style="font-size:20px">
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.linkedin.com/in/prithwishbasu/">Prithwish Basu</a> (Raytheon BBN Technologies, USA)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.labri.fr/perso/acasteig/">Arnaud Casteigts</a> (LaBRI and University of Bordeaux, France)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://sites.google.com/view/deligkas/home">Argyrios Deligkas</a> (University of Liverpool, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.cs.le.ac.uk/people/te17/">Thomas Erlebach</a> (University of Leicester, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.cs.uoi.gr/~kontog/">Spyros Kontogiannis</a> (University of Ioannina, Greece)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.ise.bgu.ac.il/engineering/PersonalWebsite1Publications.aspx?id=dVjrtdtM&c=1">Zwi Lotker</a> (Ben-Gurion University of the Negev, Israel)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.dcs.gla.ac.uk/~kitty/">Kitty Meeks</a> (University of Glasgow, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.mat.uniroma2.it/~pasquale/">Francesco Pasquale</a> (Tor Vergata University of Rome, Italy)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://scholar.google.com/citations?user=x5_c85IAAAAJ&hl=en">Marco Piangerelli</a> (University of Camerino, Italy)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=200978">Malte Renken</a> (TU Berlin, Germany)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.aalto.fi/en/people/polina-rozenshtein">Polina Rozenshtein</a> (Aalto University, Finland)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://people.scs.carleton.ca/~santoro/">Nicola Santoro</a> (Carleton University, Canada)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="http://www.amitabhtrehan.net/">Amitabh Trehan</a> (Loughborough University, UK)</li>
+<li style="margin: 8px 0;"><a target="_blank" href="https://www.ceid.upatras.gr/webpages/faculty/zaro/">Christos Zaroliagis</a> (University of Patras, Greece)</li>
+</ul>
+-->
+
+
+
+
+<!-- _____________ VIDEOS _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Video Recording</strong></p>
+
+<ul><p style="font-size:20px">
+
+The video recording of most talks can be found in the following playlist on YouTube:
+<!--<a target="_blank" style="color:#FF0000" href="https://dcloud.cs.uni-saarland.de/s/nerqQdx2eEXTTHD">video recording</a>-->
+<a target="_blank" style="color:#FF0000" href="https://www.youtube.com/playlist?list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t">AATG 2020 YouTube playlist</a>.<br><br>
+
+The individual slides and videos can be found next to the corresponding speaker in the workshop schedule below.
+
+</p></ul>
+
+
+<!-- _____________ SCHEDULE _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<!-- 
+<p style="font-size:20px"><strong>Workshop Schedule (tentative) and List of Speakers</strong></p>
+ -->
+
+<p style="font-size:20px"><strong>Workshop Schedule</strong></p>
+
+
+
+
+<ul>
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 40px;}
+  .tg td{font-size:20px;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg th{font-size:20px;font-weight:normal;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg .tg-5pt6{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd{border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd-b{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top;text-align:center}
+  </style>
+  <table class="tg">
+    <tr>
+      <th class="tg-5pt6"><strong>Time</strong></th>
+      <th class="tg-5pt6"><strong>Talk</strong></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:30-9:55</th>
+      <td class="tg-pesd"><a target="_blank" href="https://www.labri.fr/perso/acasteig/"><strong>Arnaud Casteigts</strong></a> (LaBRI and University of Bordeaux, France) 
+	  <!-- <a target="_blank" href="./Workshop-Slides/01-Casteigts-09-30_ICALP-2020.pdf">[slides]</a> -->
+	  <a target="_blank" href="https://www.youtube.com/watch?v=pgRBl--JJVc&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=1">[video]</a>
+	  </br><a href="#casteigts">Efficient generation of simple temporal graphs up to isomorphism</a></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:55-10:20</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.amitabhtrehan.net/"><strong>Amitabh Trehan</strong></a> (Loughborough University, UK) 
+	  <a target="_blank" href="./Workshop-Slides/02-Trehan-9-55_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=TfeFAiA2Ad4&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=2">[video]</a>
+	  </br><a href="#trehan">Sending and Forgetting: Termination of Amnesiac Flooding  on a Graph</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">10:20-10:45</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www-complexnetworks.lip6.fr/~magnien/"><strong>Cl&eacute;mence Magnien</strong></a> (CNRS and LIP6, Sorbonne Universit&eacute;, France)
+	  <a target="_blank" href="./Workshop-Slides/03-Magnien-10-20_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=qZyP1vyiQxc&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=3">[video]</a>
+	  </br><a href="#magnien">Computing Betweenness Centrality in Link Streams</a></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd-b" style=''text-align: center;''>10:45-11:15</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd">11:15-11:40</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=181909"><strong>Hendrik Molter</strong></a> (Technical University Berlin, Germany)
+	  <a target="_blank" href="./Workshop-Slides/04-Molter-11-15_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=q3EDLtMv574&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=4">[video]</a>
+	  </br><a href="#molter">On Temporal Betweenness Centrality</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">11:40-12:05</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.user.tu-berlin.de/tiflu/"><strong>Till Fluschnik</strong></a> (Technical University Berlin, Germany)
+	  <a target="_blank" href="./Workshop-Slides/05-Fluschnik-11-40_ICALP-2020.pdf">[slides]</a>
+	  </br><a href="#fluschnik">Temporal Graph Problems From the Multistage Model</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">12:05-12:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://zschoche.org/"><strong>Philipp Zschoche</strong></a> (Technical University Berlin, Germany)
+	  <a target="_blank" href="./Workshop-Slides/06-Zschoche-12-05_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=tmoUPFXLYh0&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=5">[video]</a>
+	  </br><a href="#zschoche">Finding Temporal Paths under Waiting Time Constraints</a></td>
+    </tr>
+
+
+    <tr>
+      <td class="tg-pesd-b">12:30-14:00</td>
+      <td class="tg-pesd-b"><strong>Lunch break</strong></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd">14:00-14:25</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.cs.le.ac.uk/people/te17/"><strong>Thomas Erlebach</strong></a> (University of Leicester, UK)
+	  <a target="_blank" href="./Workshop-Slides/07-Erlebach-14-00_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=UUJi3GQB1jY&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=6">[video]</a>
+	  </br><a href="#erlebach">Non-Strict Temporal Exploration</a></td>
+    </tr>
+	
+	<tr>
+      <td class="tg-pesd">14:25-14:50</td>
+      <td class="tg-pesd"><a target="_blank" href="http://www.mat.uniroma2.it/~clementi/"><strong>Andrea Clementi</strong></a> (University of Rome Tor Vergata, Italy)
+	  <a target="_blank" href="./Workshop-Slides/08-Clementi-14-25_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=ii0YzeUXEFc&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=7">[video]</a>
+	  </br><a href="#clementi">Simple Dynamic Graphs with Churn</a></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd">14:50-15:15</td>
+      <td class="tg-pesd"><a target="_blank" href="https://cgi.csc.liv.ac.uk/~skretas/"><strong>George Skretas</strong></a> (University of Liverpool, UK)
+	  <a target="_blank" href="./Workshop-Slides/09-Skretas-Michail-14-50_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=1__F7rdxgRk&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=8">[video]</a>
+	  </br><a href="#michail">Distributed Algorithms for Actively Dynamic Networks</a></td>
+    </tr>
+	
+	<tr>
+      <td class="tg-pesd-b" style=''text-align: center;''>15:15-15:45</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd">15:45-16:10</td>
+      <td class="tg-pesd"><a target="_blank" href="https://engineering.nyu.edu/faculty/julia-stoyanovich"><strong>Julia Stoyanovich</strong></a> (New York University Tandon School of Engineering, USA)
+	  <a target="_blank" href="./Workshop-Slides/10-Stoyanovich-15-45_ICALP-2020.pdf">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=_lDv07YeirA&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=9">[video]</a>
+	  </br><a href="#stoyanovich">Querying billion-edge evolving property graphs with Portal</a></td>
+    </tr>
+	<tr>
+      <td class="tg-pesd">16:10-16:35</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.gla.ac.uk/schools/computing/staff/jessicaenright/"><strong>Jessica Enright</strong></a> (University of Glasgow, UK)
+	  <!-- <a target="_blank" href="./Workshop-Slides/11-Enright-16-10_ICALP-2020.pdf">[slides]</a> -->
+	  </br><a href="#enright">Incorporating temporal graph structure from data in pandemic modelling</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">16:35-17:00</td>
+      <td class="tg-pesd"><a target="_blank" href="http://people.scs.carleton.ca/~santoro/"><strong>Nicola Santoro</strong></a> (Carleton University, Canada)
+	  <a target="_blank" href="./Workshop-Slides/12-Santoro-16-35_ICALP-2020.ppsx">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=I54U8dzJCO4&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=10">[video]</a>
+	  </br><a href="#santoro">Exploration of Asynchronous Temporal Graphs (of Unknown Arbitrary Topology)</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">17:00-17:25</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.site.uottawa.ca/~flocchin"><strong>Paola Flocchini</strong></a> (University of Ottawa, Canada)
+	  <a target="_blank" href="./Workshop-Slides/13-Flocchini-17-00_ICALP-2020.ppsx">[slides]</a>
+	  <a target="_blank" href="https://www.youtube.com/watch?v=x4XDaZY93HI&list=PLMwGPPdJRfmUW0c0QmZekGiv38npQlp2t&index=11">[video]</a>
+	  </br><a href="#flocchini">Exploration of dangerous temporal graphs</a></td>
+    </tr>
+	
+	
+
+  </table>
+  </ul>
+
+
+
+<p style="font-size:20px"><strong>Abstracts</strong></p>
+
+
+
+
+<ul style="list-style-type: none;">
+  <li style="margin-bottom:-0.3cm" id="casteigts"><p style="font-size:20px"><strong>Arnaud Casteigts</strong> (LaBRI and University of Bordeaux, France) 
+  <!-- <a target="_blank" href="./Workshop-Slides/01-Casteigts-09-30_ICALP-2020.pdf">[slides]</a> -->
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>Efficient generation of simple temporal graphs up to isomorphism</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>In this work, we consider a particular kind of isomorphism between temporal graphs, where two graphs are isomorphic if and only if 
+	they have the same set of temporal paths up to time distortion. The underlying motivation is to capture infinite sets of temporal graphs 
+	by finitely many representatives, on which conjectures can subsequently be tested in a comprehensive manner. In this talk, I will focus 
+	on the case of "simple temporal graphs", where the edges have exactly one presence time and times are different for adjacent edges. 
+	It turns out that the automorphisms of these graphs have special features which allows one to generate the canonical representatives efficiently. 
+	The talk will be structured as a gentle discussion covering several topics, from symmetry, to spanners, to generation trees, and a few conjectures. </i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="trehan"><p style="font-size:20px"><strong>Amitabh Trehan</strong> (Loughborough University, UK) 
+	<!-- <a target="_blank" href="./Workshop-Slides/02-Trehan-09-55_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Sending and Forgetting: Termination of Amnesiac Flooding  on a Graph</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>Imagine a network where every user is very aggressive about forwarding the messages they receive 
+	  (like hyperactive WhatsApp users). The users are polite enough in  that they do not send the message back 
+	  to the users they have just received the message from in the previous  round. However, as busy social media 
+	  users, they quickly forget this interaction and  forward the same message if they get it again in the 
+	  future - potentially circulating the same message till the end of social media civilisation!<br><br>
+	  
+	  Consider any arbitrary finite graph modelling such a network and a user who begins the process by flooding 
+	  (we call this Amnesiac Flooding) one such message. Amnesiac flooding can also be viewed as a temporal process 
+	  on a fixed graph.The natural question is will Amnesiac flooding  ever stop i.e. will this message stop 
+	  getting circulated? In general, flooding is about the simplest of distributed algorithms achieving broadcast 
+	  of messages to all nodes but termination is a critical property to achieve. We analyse both the termination 
+	  of Amnesiac Flooding and termination times and get somewhat surprising results.<br><br>
+	  
+	  Based on:<br>
+	  - Walter Hussak and Amitabh Trehan:  <a target="_blank" href="https://drops.dagstuhl.de/opus/volltexte/2020/11878/">On The Termination of Flooding, STACS 2020</a><br>
+	  - Walter,Hussk and  Amitabh Trehan: <a target="_blank" href="https://dl.acm.org/doi/10.1145/3293611.3331586">On Termination of a Flooding Process, PODC 2019 (Brief Announcement)</a><br>
+	  - Walter Hussak and  Amitabh Trehan: <a target="_blank" href="https://arxiv.org/abs/1907.07078">On The Termination of a Flooding Process (Arxiv 2019)</a>
+</i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+  
+
+    <li style="margin-bottom:-0.3cm" id="magnien"><p style="font-size:20px"><strong>Cl&eacute;mence Magnien</strong> (CNRS and LIP6, Sorbonne Universit&eacute;, France)
+	<!-- <a target="_blank" href="./Workshop-Slides/03-Magnien-10-20_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Computing Betweenness Centrality in Link Streams</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>Betweeness centrality is one of the most important concepts in graph analysis.
+It was recently extended to link streams, a graph generalization where links
+arrive over time. However, its computation raises non-trivial issues, due in
+particular to the fact that time is considered as continuous. We provide here
+the first algorithms to compute this generalized betweenness centrality.
+They work in polynomial time and space, and we illustrate them on typical examples.</i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="molter"><p style="font-size:20px"><strong>Hendrik Molter</strong> (Technical University Berlin, Germany)
+	<!-- <a target="_blank" href="./Workshop-Slides/04-Molter-11-15_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>On Temporal Betweenness Centrality</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>The betweenness centrality of a graph vertex measures how often this vertex is visited on
+shortest paths between other vertices of the graph. In the analysis of many real-world graphs or
+networks, betweenness centrality of a vertex is used as an indicator for its relative importance
+in the network. In particular, it is among the most popular tools in social network analysis. In
+recent years, a growing number of real-world networks is modeled as temporal graphs instead of
+conventional (static) graphs. In a temporal graph, we have a fixed set of vertices and there is a
+finite discrete set of time steps and every edge might be present only at some time steps. While
+shortest paths are straightforward to define in static graphs, temporal paths can be considered
+"optimal" with respect to many different criteria, including length, arrival time, and overall
+travel time (shortest, foremost, and fastest paths). This leads to different concepts of temporal
+betweenness centrality, posing new challenges on the algorithmic side.
+Computing the betweenness centrality for vertices in a graph is closely related to count-
+ing the number of shortest between vertex pairs. It turns out that counting foremost and fastest
+paths is computationally intractable (#P-hard) and hence the computation of the correspond-
+ing temporal betweenness values is intractable as well. For shortest paths and two selected
+special cases of foremost paths, there are polynomial-time algorithms for temporal betweenness
+computation. We provide a overview of the computational complexity of temporal betweenness 
+variants based on various  concepts of optimal temporal paths.<br><br>
+
+Based on joint work with Sebastian Bu&szlig;, Rolf Niedermeier, and Maciej Rymar.</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+    <li style="margin-bottom:-0.3cm" id="fluschnik"><p style="font-size:20px"><strong>Till Fluschnik</strong> (Technical University Berlin, Germany)
+	<!-- <a target="_blank" href="./Workshop-Slides/05-Fluschnik-11-40_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Temporal Graph Problems From the Multistage Model</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>In the multistage model, on a high level, we are given a sequence of T instances (stages) of the same problem, 
+	  and the task is to find good solutions for each instance such that any two solutions to consecutive instances are of small distance 
+	  (w.r.t some given distance function). 
+	  As an illustrative example, in the Multistage Vertex Cover problem, given T instances of Vertex Cover --over the same vertex set 
+	  and each with the same integer k-- and an integer l, the question is whether there is a sequence of k-sized solutions to the 
+	  instances such that any two solutions to consecutive instances have symmetric difference of size at most l. 
+	  This is a temporal graph problem: Given a temporal graph with lifetime T, integers k and l, is there a k-sized vertex cover 
+	  for each layer such that any two vertex covers to consecutive layers have symmetric difference of size at most l.<br><br>
+	  
+	  In this talk, we consider temporal graph problems derived from the multistage model. We give a brief introduction, present 
+	  two multistage graph problems (finding small vertex covers and short s-t paths) in more (algorithmic) detail, and discuss other 
+	  (than the symmetric difference) distance functions in and variations to the multistage model.</i></p></li>
+
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+	
+    <li style="margin-bottom:-0.3cm" id="zschoche"><p style="font-size:20px"><strong>Philipp Zschoche</strong> (Technical University Berlin, Germany)
+	<!-- <a target="_blank" href="./Workshop-Slides/06-Zschoche-12-05_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+  </p>
+  <p style="font-size:20px"><strong>Finding Temporal Paths under Waiting Time Constraints</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>Computing a (short) path between two vertices is one of the
+most fundamental primitives in graph algorithmics. In recent years, the
+study of paths in temporal graphs, that is, graphs where the vertex set
+is fixed but the edge set changes over time, gained more and more
+attention. A path is time-respecting, or temporal, if it uses edges with
+non-decreasing time stamps. We investigate a basic constraint for
+temporal paths, where the time spent at each vertex must not exceed a
+given duration &Delta;, referred to as &Delta;-restless temporal
+paths. This constraint arises naturally in the modeling of real-world
+processes like packet routing in communication networks and infection
+transmission routes of diseases where recovery confers lasting
+resistance. While finding temporal paths without waiting time
+restrictions is known to be doable in polynomial time, we show that the
+"restless variant" of this problem becomes computationally hard even in
+very restrictive settings. For example, it is W[1]-hard when
+parameterized by the feedback vertex number or the pathwidth of the
+underlying graph. The main question thus is whether the problem becomes
+tractable in some natural settings. We explore several natural
+parameterizations, presenting FPT algorithms for three kinds of
+parameters: (1) output-related parameters (here, the maximum length of
+the path), (2) classical parameters applied to the underlying graph
+(e.g., feedback edge number), and (3) a new parameter called timed
+feedback vertex number, which captures finer-grained temporal features
+of the input temporal graph, and which may be of interest beyond this work.<br><br>
+
+This is joint work with Arnaud Casteigts, Anne-Sophie Himmel, and Hendrik Molter.</i></p></li>
+  
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="erlebach"><p style="font-size:20px"><strong>Thomas Erlebach</strong> (University of Leicester, UK)
+    <!-- <a target="_blank" href="./Workshop-Slides/07-Erlebach-14-00_ICALP-2020.pdf">[slides]</a> -->
+    <br>
+    </p>
+    <p style="font-size:20px"><strong>Non-Strict Temporal Exploration</strong></p>
+  
+    <p style="font-size:20px"> <strong>Abstract:</strong>
+    <i>A temporal graph G = (G_1, ..., G_L) is a sequence of graphs G_i, all of which are spanning subgraphs of an underlying graph. 
+	We consider the non-strict variant of the Temporal Exploration problem, in which we are looking for a walk that visits all vertices and 
+	in which the time steps during which edges are traversed are non-decreasing (but an arbitrary number of edges can be traversed in the same time step). 
+	Deciding the existence of an exploration schedule is shown to be NP-complete for this variant. We also consider the hardness of 
+	approximating the exploration time for yes-instances in which the input graph with n vertices satisfies certain assumptions that 
+	ensure that exploration schedules always exist. The first is that each pair of vertices are contained in the same component at least 
+	once in every period of n steps, whilst the second is that the temporal diameter of the input graph is bounded by a constant c. 
+	For the latter of these two assumptions we show O(n^{1/2-eps})-inapproximability and O(n^{1-eps})-inapproximability in the cases c = 2 and c >= 3, 
+	respectively. For graphs with temporal diameter c = 2, we also prove an O(n^{1/2} log n) upper bound on the worst-case time required for exploration, 
+	as well as a lower bound of Omega(n^{1/2}) steps. <br><br>
+	
+	This is a joint work with Jakob Spooner.</i></p></li>
+  
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+  <li style="margin-bottom:-0.3cm" id="clementi"><p style="font-size:20px"><strong>Andrea Clementi</strong> (University of Rome Tor Vergata, Italy)
+  <!-- <a target="_blank" href="./Workshop-Slides/08-Clementi-14-25_ICALP-2020.pdf">[slides]</a> -->
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>Simple Dynamic Graphs with Churn</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong>
+    <i>We consider a natural  dynamic  network model with random node churn, 
+namely, a model where  the  nodes  are  inserted and deleted in the 
+network according to a simple random process. The dynamic random 
+topology of the network is determined by an elementary  local rule that 
+keeps  the  graph sparse at every round.
+We first prove that  each  snapshot of the graph process has constant  
+vertex expansion, with high probability. Then, we exploit this key 
+property  to give a logarithmic bound on the flooding time.<br><br>
+
+Finally, we discuss possible extensions of our analysis techniques to 
+other models of dynamic graphs with churn.<br><br>
+
+
+This is a joint research with Luca Becchetti, Francesco Pasquale, Luca 
+Trevisan, and Isabella Ziccardi.</i></p></li>
+  
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="michail"><p style="font-size:20px"><strong>George Skretas</strong> (University of Liverpool, UK)
+	<!-- <a target="_blank" href="./Workshop-Slides/09-Michail-14-50_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Distributed Algorithms for Actively Dynamic Networks</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>In this talk, motivated by recent advances in the algorithmic theory of dynamic networks, we study systems of distributed entities 
+	  that can actively modify their communication network. This gives rise to distributed algorithms that apart from communication can also 
+	  exploit network reconfiguration in order to carry out a given task. At the same time, the distributed task itself may now require a 
+	  global reconfiguration from a given initial network $G_s$ to a target network $G_f$ from a family of networks having some good properties, 
+	  like small diameter. <br><br>
+
+To formally capture costs associated with creating and maintaining connections, we define three reasonable edge-complexity measures: 
+the \emph{total edge activations}, the \emph{maximum active edges per round}, and the \emph{maximum degree of a node}. We highlight a 
+natural trade-off between time and edge complexity. We give (poly)log(n)
+time algorithms for transforming any initial connected network $G_s$ into a network $G_f$ of (poly)logarithmic diameter and at the same 
+time electing a unique leader, while minimizing the edge-complexity. We then discuss lower bounds.<br><br>
+
+This novel model of distributed computation and reconfiguration in actively dynamic networks and the proposed measures of the edge 
+complexity of distributed algorithms may open new avenues for research in the algorithmic theory of dynamic networks. At the same time, 
+they may serve as an abstraction of more constrained active-reconfiguration systems, such as reconfigurable robotics which come with 
+geometric constraints, and draw interesting connections with alternative network reconfiguration models, like overlay network construction 
+and network constructors. We discuss several open problems and promising future research directions.<br><br>
+
+This talk is based on a joint work with O. Michail and P. G. Spirakis to appear in PODC 2020.</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="stoyanovich"><p style="font-size:20px"><strong>Julia Stoyanovich</strong> (New York University Tandon School of Engineering, USA)
+	<!-- <a target="_blank" href="./Workshop-Slides/10-Stoyanovich-15-45_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Querying billion-edge evolving property graphs with Portal</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>In this talk I will give an overview of the Portal project that aims to support principled and efficient 
+	  querying and analysis of evolving property graphs.   We build on advances in graph databases and in temporal 
+	  relational databases and propose an evolving graph model called TGraph, together with a compositional Temporal 
+	  Graph Algebra (TGA) that operates under point-based semantics.  TGA includes principled temporal generalizations 
+	  of conventional graph operators, as well as novel zoom operators that support exploratory analysis of evolving graphs 
+	  at different levels of temporal and structural granularity.  I will briefly describe our implementation of TGraph and 
+	  TGA on top of Apache Spark --- a scalable distributed dataflow system. Additional details about our project, and the 
+	  open-source code base, are available at <a target="_blank" href="https://portaldb.github.io/home/#/">portaldb.github.io</a>.</i></p></li>
+
+    
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="enright"><p style="font-size:20px"><strong>Jessica Enright</strong> (University of Glasgow, UK)
+	<!-- <a target="_blank" href="./Workshop-Slides/11-Enright-16-10_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Incorporating temporal graph structure from data in pandemic modelling</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>Infectious diseases spread over graphs that describe contact between infectious units, and it is no surprise that temporal characteristics of the graph play an important role on the course of the disease spread.    Many models being used for the current COVID-19 pandemic make use of data-derived contact graphs that change over time - some make use of this information explicitly as a network, and some more implicitly as a replay of simulated contacts.  I will outline some of the examples of this (I’m sure to miss many out - my apologies for that!) and highlight examples in which the network plays a key role, or the model is highly sensitive to the temporal graph involved.  This will be a largely non-technical talk, with examples of data types and sources, and a frank discussion of the limitations of some of the approaches and simplifications that I have been using in my own modelling work.</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="santoro"><p style="font-size:20px"><strong>Nicola Santoro</strong> (Carleton University, Canada)
+	<!-- <a target="_blank" href="./Workshop-Slides/11-Santoro-16-10_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Exploration of Asynchronous Temporal Graphs (of Unknown Arbitrary Topology)</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>The graph exploration problem (Exploration) requires each node of the graph to be
+visited by one or more mobile computational entities, called agents, a nite number of times
+(exploration with termination) or innitely often (perpetual exploration).
+This problem has been extensively studied over a variety of assumptions and settings,
+depending on whether the nodes have distinct labelings or are anonymous, on whether the
+agents have Ids or are anonymous, the type of mechanism available to the agents for in-
+teraction communication (i.e., whiteboards, tokens, face-to-face, vision), on the degree of
+synchronization (i.e., asynchronous, semi-synchronous, fully-synchronous), on the level of
+knowledge the agents have about the graph, on their memory, etc.
+Exploration has been recently investigated also in temporal (or evolving) graphs. All
+the existing results on distributed exploration of temporal graphs have been obtained for
+synchronous temporal graphs, with strict connectivity assumptions, and usually with very
+specic topologies (rings, tori, or collections of cycles).
+In this talk I will discuss the recent investigation and results on the problem of exploring
+temporal graphs of arbitrary unknown topology, and more in general on distributed computing
+in asynchronous temporal graphs.</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+
+    <li style="margin-bottom:-0.3cm" id="flocchini"><p style="font-size:20px"><strong>Paola Flocchini</strong> (University of Ottawa, Canada)
+	<!-- <a target="_blank" href="./Workshop-Slides/12-Flocchini-16-35_ICALP-2020.pdf">[slides]</a> -->
+	<br>
+  </p>
+  <p style="font-size:20px"><strong>Exploration of dangerous temporal graphs</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+    <i>In this talk I am going to focus on the exploration of temporal graphs
+by mobile agents  in presence of a black hole, a harmful node 
+that destroys all incoming agents without leaving any trace. 
+The goal of the agents is to visit all the nodes of the graph and to have
+at least one surviving agent know the exact location of the black hole.
+Clearly, dangerous exploration (also called black hole search)  
+is unsafe for the agents, as any agent entering the black hole will be destroyed 
+and some losses have to be expected.<br><br>
+
+Black Hole Search has been investigated  extensively in  static graphs, 
+where strategies employing the minimum number of agents have been 
+studied in various settings, minimizing the number of moves and time.
+Nothing is known when the graph is dynamic, and in this talk I will move
+the first steps in this direction describing  optimal algorithms for 1-interval  connected rings.</i></p></li>
+
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+<!--
+
+  <li style="margin-bottom:-0.3cm" id="piangerelli"><p style="font-size:20px"><strong>Marco Piangerelli</strong> (University of Camerino, Italy)
+  <a target="_blank" href="./Workshop-Slides/12-Piangerelli-16-40_ICALP-2019.pdf">[slides]</a>
+  <br>
+  </p>
+  <p style="font-size:20px"><strong>TDA and Persistent Homology: a new method for analysing temporal graphs</strong></p>
+  
+  <p style="font-size:20px"> <strong>Abstract:</strong> 
+    <i>tba</i></p></li>
+
+
+  <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+
+  
+
+    <li style="margin-bottom:-0.3cm" id="trehan"><p style="font-size:20px"><strong>Amitabh Trehan</strong> (Loughborough University, UK)
+	<a target="_blank" href="./Workshop-Slides/13-Trehan-17-30_ICALP-2019.pdf">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>Temporal evolution of self-healing graphs</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>tba</i></p></li>
+    
+
+    <hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+  
+    
+
+    <li style="margin-bottom:-0.3cm" id="santoro"><p style="font-size:20px"><strong>Nicola Santoro</strong> (Carleton University, Canada)
+	<a target="_blank" href="./Workshop-Slides/14-Santoro-17-30_ICALP-2019.pps">[slides]</a>
+	<br>
+    </p>
+    <p style="font-size:20px"><strong>On infinity, continuity, regularity, and time-varying graphs</strong></p>
+    
+    <p style="font-size:20px"> <strong>Abstract:</strong> 
+      <i>tba</i></p></li>
+-->
+	  <br><br>
+</ul>
+
+
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<h3><strong>Workshop organizers*</strong></h3>
+
+<ul><p style="font-size:20px">
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="http://community.dur.ac.uk/george.mertzios/">George B. Mertzios</a> (Durham University, UK)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="http://ru1.cti.gr/Paul_Spirakis/">Paul G. Spirakis</a> (University of Liverpool, UK and University of Patras, Greece)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="https://www.dur.ac.uk/computer.science/staff/profile/?id=18445">Eleni C. Akrida</a> (Durham University, UK)</p>
+  <li><p style="font-size:20px"><a target="_blank" href="http://victorzamaraev.com/">Viktor Zamaraev</a> (University of Liverpool, UK)</p>
+</p></ul>
+
+<p style="font-size:20px">* Partially supported by the EPSRC grants <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P020372/1">EP/P020372/1</a> 
+and <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P02002X/1">EP/P02002X/1</a>, 
+and by the <a target="_blank" href=https://www.liverpool.ac.uk/network-science-technologies/>EEE/CS University of Liverpool Initiative NeST</a>.</p>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
