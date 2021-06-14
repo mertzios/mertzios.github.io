@@ -11,8 +11,8 @@ papers/Conf/Conf_Tolerance-Model-proc-1.pdf
 papers/Conf/Conf_Tolerance-Model-proc-2.pdf
 papers/*.zip
 papers/*.rar
-Workshops//*zip
-Workshops//*rar
+Workshops/*zip
+Workshops/*rar
 index.zip
 index.rar
 temp/old
