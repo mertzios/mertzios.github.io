@@ -3,7 +3,9 @@
 *plain.pdf
 *submission.pdf
 *Submission.pdf
+papers/**/*-1.pdf
 papers/**/*-2.pdf
+papers/**/*plain.pdf
 papers/Conf/Conf_Regenerators-Placement-2.pdf
 papers/Conf/Conf_Longest-Interval-proc.pdf
 papers/Conf/Conf_Strong-Bounds-Evolution-2.pdf
@@ -12,8 +14,8 @@ papers/Conf/Conf_Tolerance-Model-proc-1.pdf
 papers/Conf/Conf_Tolerance-Model-proc-2.pdf
 papers/*.zip
 papers/*.rar
-index.zip
-index.rar
+*.zip
+*.rar
 temp/old/
 temp/html-and-github-help-files/
 Workshops/**/Backups/
