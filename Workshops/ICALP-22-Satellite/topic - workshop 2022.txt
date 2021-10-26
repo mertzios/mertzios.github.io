@@ -1,0 +1,9 @@
+Topic
+
+In modern systems the classical modeling paradigm using static graphs may be restrictive or oversimplifying, as the interactions among the elementary system units usually change over time in a highly dynamic manner. For example, friendships are added and removed over time in a social network and links in a communication network may change dynamically, either according to a specific known pattern (satellites following a trajectory) or in an unpredictable manner (mobile ad hoc networks). The common characteristic in all these application areas is that the system structure, i.e. graph topology, is subject to discrete changes over time. In such dynamically changing graphs the notion of vertex adjacency needs to be revisited and various graph concepts, e.g. reachability and connectedness, now crucially depend on the exact temporal ordering of the edges' presence.
+
+A temporal graph is a graph that changes over time. Assuming discrete time and a fixed set V of vertices, a temporal graph can be viewed as a discrete sequence G1, G2, ... of static graphs, each with vertex set V. Many notions and algorithms from the static case can be naturally transferred in a meaningful way to their temporal counterpart, while in other cases new approaches are needed to define the appropriate temporal notions. In particular, some problems become radically different and substantially more difficult when the time dimension is additionally taken into account.
+
+In this one-day workshop, recent advances in the area of temporal / dynamically changing graphs will be presented, as well as some of the key challenges will be highlighted. As this research area grows and broadens, our aim is to bring together people from theoretical and practical communities of temporal graphs in order to establish new and strengthen existing links between these communities.
+
+Presentations are given by invitation only. Everyone is welcome to register and attend.
