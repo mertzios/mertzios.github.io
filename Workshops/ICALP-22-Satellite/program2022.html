@@ -1,0 +1,499 @@
+<html>
+
+<head>
+<title>Algorithmic Aspects of Temporal Graphs V -- ICALP 2022 workshop</title>
+</head>
+
+<body style="max-width: 75%; margin: auto;">
+
+	<center><p style="font-size:40px"><strong>Algorithmic Aspects of Temporal Graphs V*</strong></p>
+	
+	<p style="font-size:30px">Satellite workshop of <a target="_blank" href="?????">ICALP 2022</a><br>	
+	Paris, France<br>
+	Monday 4 July 2022<br>
+	(hybrid event) </p>
+	</center>
+
+
+	
+<!-- _____________ ROLF _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px">
+
+<table style="width: 1200px; height: 172px;" border="0" cellpadding="0" cellspacing="0">
+
+<td width="850">
+	<ul><p style="font-size:20px">
+This workshop is devoted to the memory of <a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=110570"><strong>Prof. Dr. Rolf Niedermeier</strong></a>, <br>  
+who has been a great scientist, a dear colleague and a good friend.
+	</p></ul>
+</td>
+	 
+</table>
+
+
+
+
+<!-- <img src="niedermr.jpg" alt="Italian Trulli" style="float:right"> -->
+ 
+
+
+	
+<!-- _____________ TOPIC _____________ -->
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Topic</strong></p>
+
+<p style="font-size:20px">
+In modern systems the classical modeling paradigm using static graphs may be restrictive or oversimplifying, 
+as the interactions among the elementary system units usually change over time in a highly dynamic manner. 
+For example, friendships are added and removed over time in a social network and 
+links in a communication network may change dynamically, 
+either according to a specific known pattern (satellites following a trajectory) 
+or in an unpredictable manner (mobile ad hoc networks). 
+The common characteristic in all these application areas is that the system structure, 
+i.e. graph topology, is subject to <i>discrete changes over time</i>. 
+In such dynamically changing graphs the notion of <i>vertex adjacency</i> needs to be 
+revisited and various graph concepts, e.g. reachability and connectedness, now crucially 
+depend on the exact <i>temporal ordering</i> of the edges' presence.<br><br>
+
+
+A temporal graph is a graph that changes over time. Assuming discrete time and a fixed set V of vertices, 
+a temporal graph can be viewed as a discrete sequence G<sub>1</sub>, G<sub>2</sub>, ... of static graphs, each with vertex set V. 
+
+Many notions and algorithms from the static case can be naturally transferred in a meaningful way 
+to their temporal counterpart, while in other cases new approaches are needed to define the 
+appropriate temporal notions. In particular, some problems become radically different and 
+substantially more difficult when the time dimension is additionally taken into account.<br><br>
+
+
+In this one-day workshop, recent advances in the area of temporal / dynamically changing graphs will be presented, 
+as well as some of the key challenges will be highlighted. 
+As this research area grows and broadens, our aim is to bring together people from theoretical and practical 
+communities of temporal graphs in order to establish new and strengthen existing links between these communities.<br><br>
+
+This workshop is the sequel of the three previous workshops at 
+<a target="_blank" href="../ICALP-18-Satellite/Temporal-Graphs-ICALP-2018.html">ICALP 2018 (in Prague)</a>, 
+<a target="_blank" href="../ICALP-19-Satellite/Temporal-Graphs-ICALP-2019.html">ICALP 2019 (in Patras)</a>,  
+<a target="_blank" href="../ICALP-20-Satellite/Temporal-Graphs-ICALP-2020.html">ICALP 2020 (online)</a>, and 
+<a target="_blank" href="../ICALP-21-Satellite/Temporal-Graphs-ICALP-2021.html">ICALP 2021 (online)</a>.<br><br>
+
+
+
+ 
+ 
+<!-- _____________ VIDEOS _____________ -->
+
+<!-- 
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<p style="font-size:20px"><strong>Video Recording</strong></p>
+
+<ul><p style="font-size:20px">
+
+The video recording of most talks can be found in the following playlist on YouTube:
+<a target="_blank" style="color:#FF0000" href="https://www.youtube.com/playlist?list=PLMwGPPdJRfmUhai1JspnccLjkq6L22-b-">AATG 2021 YouTube playlist</a>.<br><br>
+
+The individual slides and videos can be found next to the corresponding speaker in the workshop schedule below.
+
+</p></ul>
+-->
+
+
+
+
+
+
+
+
+
+<!-- _____________ SCHEDULE _____________ -->
+
+
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+
+<p style="font-size:20px"><strong>Workshop Schedule:</strong> All times below are in <a target="_blank" href="https://time.is/CET"><strong>Central European Time (CET)</strong></a></p>
+
+
+
+
+<ul>
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 40px;}
+  .tg td{font-size:20px;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg th{font-size:20px;font-weight:normal;padding:20px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg .tg-5pt6{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd{border-color:#e6e6e6;vertical-align:top}
+  .tg .tg-pesd-b{background-color:#f7f7f7;border-color:#e6e6e6;vertical-align:top;text-align:center}
+  </style>
+  <table class="tg">
+    <tr>
+      <th class="tg-5pt6"><strong>Time</strong></th>
+      <th class="tg-5pt6"><strong>Talk</strong></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:25-9:30</th>
+      <td class="tg-pesd">Opening and welcome
+    </tr>
+    <tr>
+      <td class="tg-pesd">9:30-10:00</th>
+      <td class="tg-pesd"><a target="_blank" href="https://pure.royalholloway.ac.uk/portal/en/persons/eduard-eiben(9ee8fd8f-cbc6-4365-bda4-79850f62e36d).html"><strong>Eduard Eiben</strong></a> (Royal Holloway University of London, UK) 
+	  <!--<a target="_blank" href="./Workshop-Slides/01-Baste-09-35_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/ofXWox4DtgA">[video]</a>-->
+	  </br><a href="#eiben">Minimizing Reachability Times on Temporal Graphs via Shifting Labels</a></th>
+    </tr>
+    <tr>
+      <td class="tg-pesd">10:00-10:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://ninakl.github.io/"><strong>Nina Klobas</strong></a> (Durham University, UK) 
+	  <!--<a target="_blank" href="./Workshop-Slides/02-Bui-Xuan-10-00_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/5COqhPrV7dY">[video]</a>-->
+	  </br><a href="#klobas">Defining Labeling that Preserves Reachability</a></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd-b" style=''text-align: center;''>10:30-11:00</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd">11:00-11:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.durham.ac.uk/staff/thomas-erlebach/"><strong>Thomas Erlebach</strong></a> (Durham Univerity, UK)
+	  <!--<a target="_blank" href="./Workshop-Slides/03-Chimani-10-25_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/wLR2eqPP9fM">[video]</a>-->
+	  </br><a href="#erlebach">Parameterized Temporal Exploration Problems</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">11:30-12:00</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=200978"><strong>Malte Renken</strong></a> (TU Berlin, Germany)
+	  <!--<a target="_blank" href="./Workshop-Slides/04-Kammer-10-50_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/KMXo1kjbRmU">[video]</a>-->
+	  </br><a href="#renken">Temporal Pathfinding in the Presence of Delays</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">12:00-12:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.akt.tu-berlin.de/index.php?id=181909"><strong>Hendrik Molter</strong></a> (Ben Gurion University of the Negev, Israel)
+	  <!--<a target="_blank" href="./Workshop-Slides/xxx">[slides]</a> 
+	  <a target="_blank" href="https://www.youtube.com/xxx">[video]</a>-->
+	  </br><a href="#molter">Counting Temporal Paths</a></td>
+    </tr>
+	
+	
+    <tr>
+      <td class="tg-pesd-b">12:30-14:00</td>
+      <td class="tg-pesd-b"><strong>Lunch break</strong></td>
+    </tr>
+	
+	
+    <tr>
+      <td class="tg-pesd">14:00-14:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.labri.fr/perso/acasteig/"><strong>Arnaud Casteigts</strong></a> (LaBRI and University of Bordeaux, France)
+	  <!--<a target="_blank" href="./Workshop-Slides/06-Gullo-12-10_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/dJ9XW3Qtbn0">[video]</a>-->
+	  </br><a href="#casteigts">Sharp Thresholds in Random Simple Temporal Graphs</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">14:30-15:00</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.abc.org.br/membro/ana-shirley-ferreira-da-silva/"><strong>Ana Silva</strong></a> (Federal University of Ceará, Brasil)
+	  <!--<a target="_blank" href="./Workshop-Slides/07-Molter-12-35_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/I72kiqYUXNM">[video]</a>-->
+	  </br><a href="#silva">Temporal Menger and Related Problems</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">15:00-15:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.gla.ac.uk/pgrs/samuelhand/"><strong>Samuel Hand</strong></a> (University of Glasgow, UK)
+	  <!--<a target="_blank" href="./Workshop-Slides/08-Weller-14-00_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/odQBHil06uw">[video]</a>-->
+	  </br><a href="#hand">The Temporal Firefighter Problem</a></td>
+    </tr>
+	
+    <tr>
+      <td class="tg-pesd-b" style=''text-align: center;''>15:30-16:00</td>
+      <td class="tg-pesd-b"><strong>Coffee break</strong></td>
+    </tr>
+	
+	<tr>
+      <td class="tg-pesd">16:00-16:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://suhastheju.github.io/"><strong>Suhas Thejaswi</strong></a> (Aalto University, Finland)
+	  <!--<a target="_blank" href="./Workshop-Slides/09-Froese-14-25_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://www.youtube.com/watch?v=LelGPR_giXE">[video]</a>-->
+	  </br><a href="#muniyappa-thejaswi">Finding Path Motifs in Temporal Graphs using Algebraic Fingerprints</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">16:30-17:00</td>
+	  <td class="tg-pesd"><a target="_blank" href="https://www.gssi.it/institute/disciplinary-board/item/10311-crescenzi-pierluigi"><strong>Pierluigi Crescenzi</strong></a> (Gran Sasso Science Institute, Italy)
+	  <!--<a target="_blank" href="./Workshop-Slides/10-Villani-14-50_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/yZRNLjbfxxs">[video]</a>-->
+	  </br><a href="#crescenzi">On Making Graphs Temporally (In)Efficient</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">17:00-17:30</td>
+      <td class="tg-pesd"><a target="_blank" href="https://www.unifi.it/p-doc2-2019-0-A-2d2a39323a2f-1.html"><strong>Andrea Marino</strong></a> (University of Florence, Italy)
+	  <!--<a target="_blank" href="./Workshop-Slides/11-Fernandez-Anta-15-45_ICALP-2021.pptx">[slides]</a>
+	  <a target="_blank" href="https://youtu.be/FqZMX84VFbU">[video]</a>-->
+	  </br><a href="#marino">On Computing the Diameter of (Weighted) Link Streams</a></td>
+    </tr>
+    <tr>
+      <td class="tg-pesd">17:30-18:00</td>
+      <td class="tg-pesd"><a target="_blank" href="http://people.scs.carleton.ca/~santoro/"><strong>Nihola Santoro</strong></a> (Carleton University, Canada)
+	  <!--<a target="_blank" href="./Workshop-Slides/12-Holme-16-10_ICALP-2021.pdf">[slides]</a> 
+	  <a target="_blank" href="https://youtu.be/xpFlLGSmotU">[video]</a>-->
+	  </br><a href="#santoro">On Cop & Robber in  a Periodic Temporal Graph</a></td>
+    </tr>
+  </table>
+  </ul>
+
+
+
+
+
+
+<p style="font-size:20px"><strong>Abstracts</strong></p>
+
+
+<ul style="list-style-type: none;">
+	<li style="margin-bottom:-0.3cm" id="eiben">
+	<p style="font-size:20px"><strong>Eduard Eiben</strong> (Royal Holloway University of London, UK) <br>
+	</p>
+	<p style="font-size:20px"><strong>Minimizing Reachability Times on Temporal Graphs via Shifting Labels</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>We study how we can accelerate the spreading of information in temporal graphs via delaying operations; a problem that captures real-world applications varying from information flows to distribution schedules. 
+	In a temporal graph there is a set of fixed vertices and the available connections between them change over time in a predefined manner. We observe that, in some cases, the delay of some connections can 
+	in fact decrease the time required to reach from some vertex (source) to another vertex (target). We study how we can minimize the maximum time a set of source vertices needs to reach every other vertex of 
+	the graph when we are allowed to delay some of the connections of the graph. For one source, we prove that the problem is W[2]-hard and NP-hard, when parameterized by the number of allowed delays. 
+	On the other hand, we derive a polynomial-time algorithm for one source and unbounded number of delays. This is the best we can hope for; we show that the problem becomes NP-hard when there are two sources 
+	and the number of delays is not bounded. We complement our negative result by providing an FPT algorithm parameterized by the treewidth of the graph plus the lifetime of the optimal solution. 
+	Finally, we provide polynomial-time algorithms for several classes of graphs.<br><br>
+	
+	This is a joint work with Argyrios Deligkas and George Skretas.
+	</i></p></li>
+    
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="klobas"><p style="font-size:20px"><strong>Nina Klobas</strong> (Durham University, UK) <br>
+	</p>
+    <p style="font-size:20px"><strong>Defining Labeling that Preserves Reachability</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>We study temporal design problems of undirected temporally connected graphs. The basic setting of these optimization problems is as follows: given an undirected graph G, what is the smallest number of time-labels that we need to add to the edges of G such that the resulting temporal graph is temporally connected? This basic problem, called MINIMUM LABELING, can be optimally solved in polynomial time, thus resolving an open question. The situation becomes however more complicated if we strengthen, or even if we relax a bit, the requirement of temporal connectivity of the temporal graph. One way to strengthen the temporal connectivity requirements is to upper-bound the allowed age (i.e., maximum label) of the obtained temporal graph. On the other hand, we can relax temporal connectivity by only requiring that there exists a temporal path between any pair of ``important'' vertices which lie in a subset R of V, which we call the terminals. This relaxed problem, called MINIMUM STEINER LABELING, resembles the problem STEINER TREE in static (i.e., non-temporal) graphs; however, as it turns out, STEINER TREE is not a special case of MINIMUM STEINER LABELING.<br><br>
+	
+	This is a join work with Geroge B. Mertzios, Hendrik Molter, and Paul G. Spirakis.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="erlebach"><p style="font-size:20px"><strong>Thomas Erlebach</strong> (Durham Univerity, UK) <br>
+	</p>
+    <p style="font-size:20px"><strong>Parameterized Temporal Exploration Problems</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>The temporal exploration problem, which aims at visiting all vertices
+	of a given temporal graph as quickly as possible, is NP-hard in most
+	settings. We study parameterized versions of this problem for strict
+	and non-strict temporal walks. For strict temporal walks, we give
+	FPT algorithms for the problem of visiting k given vertices or
+	k arbitrary vertices, parameterized by k. For non-strict temporal
+	walks, we give an FPT algorithm for visiting all vertices,
+	parameterized by the lifetime of the graph. We also consider
+	the case of non-strict temporal exploration with a bounded number
+	of components in each time step.<br><br>
+	
+	This is joint work with Jakob Spooner.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="renken"><p style="font-size:20px"><strong>Malte Renken</strong> (TU Berlin, Germany) <br>
+	</p>
+    <p style="font-size:20px"><strong>Temporal Pathfinding in the Presence of Delays</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>Finding paths in temporal graphs has many obvious applications, e.g. in public transport networks. In many of these, delays are unfortunately a constant problem to cope with, especially as they can cause one to miss subsequent links at transfer stations. This creates a need find paths which are robust to some number of (small) delays. An important factor in determining the robustness of a connection is how far in advance delays are announced and whether deviating from the initial route is possible. We consider three different settings: one where delays are known before departure, one where delays occur without prior warning, and one where deviating from the chosen route is impossible (in this case the time at which delays are announced does not matter). In this talk, we look into all three of these cases from an algorithmic perspective and provide results on the (parameterized) complexity.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="molter"><p style="font-size:20px"><strong>Hendrik Molter</strong> (Ben Gurion University of the Negev, Israel) <br>
+	</p>
+    <p style="font-size:20px"><strong>Counting Temporal Paths</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>The betweenness centrality of a vertex v is an important centrality measure that quantifies how many optimal paths between pairs of other vertices visit v. 
+	Computing betweenness centrality in a temporal graph, in which the edge set may change over discrete timesteps, requires us to count temporal paths that are optimal with 
+	respect to some criterion. For several natural notions of optimality, including foremost or fastest temporal paths, this counting problem reduces to #Temporal Path, 
+	the problem of counting all temporal paths between a fixed pair of vertices; like the problems of counting foremost and fastest temporal paths, #Temporal Path is #P-hard in general. 
+	Motivated by the many applications of this intractable problem, we initiate a systematic study of the parameterised and approximation complexity of #Temporal Path. 
+	We show that the problem presumably does not admit an FPT-algorithm for the feedback vertex number of the static underlying graph, and that it is hard to approximate in general. 
+	On the positive side, we proved several exact and approximate FPT-algorithms for special cases.<br><br>
+
+	Based on joint work with Jessica Enright and Kitty Meeks.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="casteigts"><p style="font-size:20px"><strong>Arnaud Casteigts</strong> (LaBRI and University of Bordeaux, France) <br>
+	</p>
+    <p style="font-size:20px"><strong>Sharp Thresholds in Random Simple Temporal Graphs</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>We will focus on a simple model of random temporal graphs, having the
+same parameters n and p as classical Erdös-Rényi graphs. In this model,
+we characterize various thresholds on temporal reachability as the graph
+densifies -- in particular, temporal connectivity (the existence of
+temporal paths between all pairs of vertices) occurs exactly at p = 3
+log n / n. Interestingly, it turns out that above this threshold, there
+also exists temporal spanners of near-optimal size (i.e. 2n+o(n)
+ edges).
+Among other things, this means that all the known counter-examples to
+the existence of linear-size spanners are statistically insignificant.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="silva"><p style="font-size:20px"><strong>Ana Silva</strong> (Federal University of Ceará, Brasil) <br>
+	</p>
+    <p style="font-size:20px"><strong>Temporal Menger and Related Problems</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>Given a graph G and vertices s and t of G, Menger’s Theorem states that the maximum number of (internally) vertex disjoint s,t-paths is equal to the minimum size of a subset X for which G-X contains no s,t-path. This is a classical result in Graph Theory, taught in most basic Graph Theory courses, and it holds also when G is directed and when edge disjoint paths and edge cuts are considered instead. A direct translation of Menger’s Theorem to the temporal context has been known not to hold since an example was shown in the seminal paper by Kempe, Kleinberg and Kumar (STOC’00). In this talk, an overview of possible temporal versions of Menger’s Theorem will be discussed, as well as the complexity of the related problems.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="hand"><p style="font-size:20px"><strong>Samuel Hand</strong> (University of Glasgow, UK) <br>
+	</p>
+    <p style="font-size:20px"><strong>The Temporal Firefighter Problem</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>The Firefighter problem on a static graph asks how to best prevent the vertices of a graph from "burning" when a fire is spreading over the graph. At timestep 0 a vertex begins burning, and then at each subsequent timestep a chosen vertex is defended, before the fire spreads to all adjacent undefended vertices. The problem of determining how many vertices can be saved from the fire in such a process is NP-complete, however several classes of graph have been found for which there are polynomial time solutions. We introduce the problem Temporal Firefighter, an extension of Firefighter to temporal graphs. We show that Temporal Firefighter is also NP-complete, and furthermore remains so on all but one of the underlying classes of graph for which Firefighter is known to have polynomial-time solutions. We then turn our attention to restricting the temporal structure of the graph, finding that Temporal Firefighter is fixed parameter tractable with respect to the temporal graph parameter vertex-interval-membership-width, but remains hard even on trees with at most two edges active per timestep.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="muniyappa-thejaswi"><p style="font-size:20px"><strong>Suhas Thejaswi</strong> (Aalto University, Finland) <br>
+	</p>
+    <p style="font-size:20px"><strong>Finding Path Motifs in Temporal Graphs using Algebraic Fingerprints.</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>We study the problem of detecting and finding temporal patterns in
+	vertex-colored temporal graphs. In particular, given a vertex-colored temporal
+	graph and a multiset of colors (query), we search for a temporal path in the
+	graph such that the vertex colors of the path agree with the multiset of colors
+	specified in the query. We extend the constrained-multilinear sieving technique
+	to present polynomial-space FPT-exact algorithms for a family of
+	pattern-detection problems parameterized by the size of the multiset query. We
+	present efficient generating functions to answer temporal-reachability queries
+	under restrictive settings such as waiting-time restrictions as well as vertex
+	and edge constraints. The presented algorithms are probably optimal for a subset
+	of temporal path problems and practically scale to large real-world problem
+	instances with up to one billion temporal edges.<br><br>
+	
+	Joint work with Aristides Gionis and Juho Lauri.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="crescenzi"><p style="font-size:20px"><strong>Pierluigi Crescenzi</strong> (Gran Sasso Science Institute, Italy) <br>
+	</p>
+    <p style="font-size:20px"><strong>On Making Graphs Temporally (In)Efficient</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>A typical question that has been considered in the literature in the field of network optimisation consists in finding the graph modification which maximises or minimises a specific optimisation criterion (often connected to the notion of reachability and distance between nodes). Recently, this kind of problems has been analysed also in the case of temporal graphs, that is, graphs whose topology changes over time. For instance, the problem of deleting edges from a given temporal graph in order to reduce its temporal reachability, the problem of assigning the appearing time to the edges of a graph in order to minimise the temporal reachability of the resulting temporal graph, or the problem of minimising the average temporal reachability in a temporal graph by delaying some edges, have been considered. In this talk we first briefly review these results and we then consider the problem of assigning appearing times to the edges of a digraph in order to maximize the (average) temporal reachability between pairs of nodes.<br><br> 
+	
+	Motivated by the application to public transit networks, where edges cannot be scheduled independently one of another, we consider the setting where the edges are grouped into certain walks (called trips) in the digraph and where assigning the appearing time to the first edge of a trip forces the appearing times of the subsequent edges. In this setting, we show that, quite surprisingly, it is NP-complete to decide whether there exists a time assignment connecting a given pair of nodes. This result allows us to prove that the problem of maximising the temporal reachability cannot be approximated within a factor better than some polynomial term in the size of the graph. We thus focus on the case where, for each pair of nodes, there exists a time assignment such that one node is reachable from the other. We call this property strong temporalisability. It is a very natural assumption for the application to public transit networks.
+	
+	<br><br> On the negative side, the problem of maximising the temporal reachability remains, in that setting, hard to approximate within a factor proportional to the square root of the number of nodes. Moreover, we show the existence of collections of trips that are strongly temporalisable but for which any time assignment connects at most a fraction of all pairs of nodes proportional to the inverse of the square root of the number of nodes. On the positive side, we show that there must exist a time assignment that connects a constant fraction of all pairs in the strongly temporalisable and symmetric case, that is, when the set of trips to be scheduled is such that, for each trip, there is a symmetric trip visiting the same nodes in reverse order. We conclude with the main problem left open by our results, that is, whether the case of single edge trips (which is still NP-hard) can be approximated in polynomial time.<br><br>
+	
+	This is a joint work with Filippo Brunelli and Laurent Viennot.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="marino"><p style="font-size:20px"><strong>Andrea Marino</strong> (University of Florence, Italy) <br>
+	</p>
+    <p style="font-size:20px"><strong>On Computing the Diameter of (Weighted) Link Streams</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>A weighted link stream is a pair (V,E) comprising V, the set of nodes, and E, the list of temporal edges (u,v,t,\lambda), where u,v are two nodes in V, t is the starting time of the temporal edge, and \lambda is its travel time. By making use of this model, different notions of diameter can be defined, which refer to the following distances: earliest arrival time, latest departure time, fastest time, and shortest time. After proving that any of these diameters cannot be computed in time sub-quadratic with respect to the number of temporal edges, we propose different algorithms (inspired by the approach used for computing the diameter of graphs) which allow us to compute, in practice very efficiently, the diameter of quite large real-world weighted link stream for several definitions of the diameter. In the case of the fastest time distance and of the shortest time distance, we introduce the notion of pivot-diameter, in order to deal with the fact that temporal paths cannot be concatenated in general. The pivot-diameter is the diameter restricted to the set of pairs of nodes connected by a path which passes through a pivot (that is, a node at a given time instant). We prove that the problem of finding an optimal set of pivots, in terms of the number of pairs connected, is NP-hard, and we propose and experimentally evaluate several simple and fast heuristics for computing ``good'' pivot sets.
+	</i></p></li>
+	
+	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
+	
+	
+	<li style="margin-bottom:-0.3cm" id="santoro"><p style="font-size:20px"><strong>Nihola Santoro</strong> (Carleton University, Canada) <br>
+	</p>
+    <p style="font-size:20px"><strong>On Cop & Robber in  a Periodic Temporal Graph</strong></p>
+	
+	<p style="font-size:20px"> <strong>Abstract:</strong> 
+	<i>A temporal graph G is (usually represented as) a possibly infinite
+sequence of graphs, G= (G(0),G(1),G(2)...), where G(t) denotes the
+topology of G at time t. Problem solving by mobile computational
+entities operating in a temporal graph G is an intensively
+investigated research area, where the  focus has been almost
+exclusively on cooperating entities.
+In this talk we consider instead  competitive  entities in a temporal
+graph, focusing in particular on the well known two-players
+pursue-evasion game of Cop & Robber, played in discrete rounds.
+Thus,  in  round i, the players are in G(i) and, first the cop and
+then the robber, make their decisions and moves, and  they find
+themselves in G(i+1) in the next round. The cop wins iff both players
+are in the same node in some round
+Knowing the changes beforehand, can the cop still find a winning
+strategy or the robber forever avoid capture? Under what conditions
+G is copwin? This talk will address some of these questions and
+the issues that they raise,  focusing in particular on periodic
+temporal graphs.<br><br>
+
+This is based on joint work with Jean-Lou de Carufel, Paola Flocchini,
+and Frederic Simard.
+	</i></p></li>
+	
+
+
+<hr size="1" width="100%" style="margin-bottom: 40px;">
+<h3><strong>Workshop organizers*</strong></h3>
+
+<ul><p style="font-size:20px">
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="https://mertzios.net/">George B. Mertzios</a> (Durham University, UK)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="http://ru1.cti.gr/Paul_Spirakis/">Paul G. Spirakis</a> (University of Liverpool, UK and University of Patras, Greece)</p>
+  <li style="margin-bottom:-0.3cm"><p style="font-size:20px"><a target="_blank" href="https://www.dur.ac.uk/directory/profile/?id=18445">Eleni C. Akrida</a> (Durham University, UK)</p>
+  <li><p style="font-size:20px"><a target="_blank" href="https://victorzamaraev.com/">Viktor Zamaraev</a> (University of Liverpool, UK)</p>
+</p></ul>
+
+<p style="font-size:20px">* Partially supported by the EPSRC grants <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P020372/1">EP/P020372/1</a> 
+and <a target="_blank" href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/P02002X/1">EP/P02002X/1</a>, 
+and by the <a target="_blank" href=https://www.liverpool.ac.uk/network-science-technologies/>EEE/CS University of Liverpool Initiative NeST</a>.</p>
+
+<!-- <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fmertzios.github.io%2F?color=white?lcolor=white" alt="Visitors"> -->
+
+
+<br>
+<br>
+<br>
+
+
+</body>
+
+</html>
