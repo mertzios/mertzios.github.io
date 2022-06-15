@@ -1,0 +1,29 @@
+Time	Talk
+9:25-9:30	Opening and welcome
+9:30-10:00	Eduard Eiben (Royal Holloway University of London, UK)
+Minimizing Reachability Times on Temporal Graphs via Shifting Labels
+10:00-10:30	Nina Klobas (Durham University, UK)
+Defining Labeling that Preserves Reachability
+10:30-11:00	Coffee break
+11:00-11:30	Thomas Erlebach (Durham Univerity, UK)
+Parameterized Temporal Exploration Problems
+11:30-12:00	Malte Renken (TU Berlin, Germany)
+Temporal Pathfinding in the Presence of Delays
+12:00-12:30	Hendrik Molter (Ben Gurion University of the Negev, Israel)
+Counting Temporal Paths
+12:30-14:00	Lunch break
+14:00-14:30	Arnaud Casteigts (LaBRI and University of Bordeaux, France)
+Sharp Thresholds in Random Simple Temporal Graphs
+14:30-15:00	Ana Silva (Federal University of Ceará, Brasil)
+Temporal Menger and Related Problems
+15:00-15:30	Samuel Hand (University of Glasgow, UK)
+The Temporal Firefighter Problem
+15:30-16:00	Coffee break
+16:00-16:30	Suhas Thejaswi (Aalto University, Finland)
+Finding Path Motifs in Temporal Graphs using Algebraic Fingerprints
+16:30-17:00	Pierluigi Crescenzi (Gran Sasso Science Institute, Italy)
+On Making Graphs Temporally (In)Efficient
+17:00-17:30	Andrea Marino (University of Florence, Italy)
+On Computing the Diameter of (Weighted) Link Streams
+17:30-18:00	Nihola Santoro (Carleton University, Canada)
+On Cop & Robber in a Periodic Temporal Graph
