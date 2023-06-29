@@ -504,26 +504,32 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	
 	
-	<li style="margin-bottom:-0.3cm" id="schoeters"><p style="font-size:20px"><strong>Jason Schoeters</strong> (University of Cambridge, UK) <br>
+	<li style="margin-bottom:-0.3cm" id="jain"><p style="font-size:20px"><strong>Anuj Jain</strong> (University of Florida, Gainesville, USA, and Adobe Systems Inc.) <br>
 	</p>
-    <p style="font-size:20px"><strong>On inefficient temporal graphs</strong></p>
+    <p style="font-size:20px"><strong>Optimal paths and walks in temporal graphs</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
-	<i>Temporal network design is the study of how to optimally design networks with connections over time, 
-	represented as a graph with an edge labeling (or a temporal graph). This area of research has previously 
-	focused on minimising the number of labels to ensure temporal connectivity, whether it's the local or global 
-	number of labels, all-to-all or terminal-to-terminal connectivity, or with additional constraints such as 
-	limiting the age of the network. In this work, we focus on what would be the maximum number of connections. 
-	This can represent the power of an adversary deliberately trying to design an inefficient network, even in the 
-	presence of a verifier. This also implies results on greedy algorithms for finding sparse spanners in temporal graphs.
+	<i>Path and walk problems are fundamental to the study of graphs. Temporal graphs are graphs in which the edges and vertices 
+	change with time. We study path and walk problems and develop algorithms for finding min-hop, foremost, min-hop foremost (<em>mhf</em>), 
+	min-wait foremost (mwf) and min-cost foremost (<em>mcf</em>) walks in interval temporal graphs (<em>ITGs</em>). We show experimentally that the 
+	algorithms we develop outperform all the known algorithms for solving these problems by orders of magnitude on the various 
+	benchmark datasets. We show that certain path/walk problems are NP-hard on interval temporal graphs while they are polynomially 
+	solvable on contact sequence graph models (<em>CSGs</em>).
 	
 	<br><br>
 	
-    We present structural results for basic graph families such as trees and cycles, and explore algorithmic ideas on 
-	how to efficiently compute maximum labellings, including a round-based game between adversary and verifier.
+	We also develop an algorithm to find optimal walks for any linear combination of the various optimization criteria with waiting 
+	time constraints on temporal graphs with no-zero duration cycles. We show that our linear combination algorithm outperforms the 
+	state-of-the-art algorithm for this problem on every benchmark dataset by a factor ranging from 5.5 to 77.
+	
+	<br><br>
+	
+	This is joint work with Dr Sartaj Sahni (	<a target="_blank" href="https://www.cise.ufl.edu/~sahni/">https://www.cise.ufl.edu/~sahni/</a>).
+
 	</i></p></li>
 	
 	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
+	
 	
 	
 	
@@ -606,28 +612,23 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	
 	
-	<li style="margin-bottom:-0.3cm" id="jain"><p style="font-size:20px"><strong>Anuj Jain</strong> (University of Florida, Gainesville, USA, and Adobe Systems Inc.) <br>
+	<li style="margin-bottom:-0.3cm" id="schoeters"><p style="font-size:20px"><strong>Jason Schoeters</strong> (University of Cambridge, UK) <br>
 	</p>
-    <p style="font-size:20px"><strong>Optimal paths and walks in temporal graphs</strong></p>
+    <p style="font-size:20px"><strong>On inefficient temporal graphs</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
-	<i>Path and walk problems are fundamental to the study of graphs. Temporal graphs are graphs in which the edges and vertices 
-	change with time. We study path and walk problems and develop algorithms for finding min-hop, foremost, min-hop foremost (<em>mhf</em>), 
-	min-wait foremost (mwf) and min-cost foremost (<em>mcf</em>) walks in interval temporal graphs (<em>ITGs</em>). We show experimentally that the 
-	algorithms we develop outperform all the known algorithms for solving these problems by orders of magnitude on the various 
-	benchmark datasets. We show that certain path/walk problems are NP-hard on interval temporal graphs while they are polynomially 
-	solvable on contact sequence graph models (<em>CSGs</em>).
+	<i>Temporal network design is the study of how to optimally design networks with connections over time, 
+	represented as a graph with an edge labeling (or a temporal graph). This area of research has previously 
+	focused on minimising the number of labels to ensure temporal connectivity, whether it's the local or global 
+	number of labels, all-to-all or terminal-to-terminal connectivity, or with additional constraints such as 
+	limiting the age of the network. In this work, we focus on what would be the maximum number of connections. 
+	This can represent the power of an adversary deliberately trying to design an inefficient network, even in the 
+	presence of a verifier. This also implies results on greedy algorithms for finding sparse spanners in temporal graphs.
 	
 	<br><br>
 	
-	We also develop an algorithm to find optimal walks for any linear combination of the various optimization criteria with waiting 
-	time constraints on temporal graphs with no-zero duration cycles. We show that our linear combination algorithm outperforms the 
-	state-of-the-art algorithm for this problem on every benchmark dataset by a factor ranging from 5.5 to 77.
-	
-	<br><br>
-	
-	This is joint work with Dr Sartaj Sahni (	<a target="_blank" href="https://www.cise.ufl.edu/~sahni/">https://www.cise.ufl.edu/~sahni/</a>).
-
+    We present structural results for basic graph families such as trees and cycles, and explore algorithmic ideas on 
+	how to efficiently compute maximum labellings, including a round-based game between adversary and verifier.
 	</i></p></li>
 	
 	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
