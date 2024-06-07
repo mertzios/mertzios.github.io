@@ -265,7 +265,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	  <td class="tg-pesd"><a target="_blank" href="https://www.liverpool.ac.uk/computer-science/staff/john-sylvester/"><strong>John Sylvester </strong></a> (University of Liverpool, UK)
 	  <!-- <a target="_blank" href="./Workshop-Slides/slides-aatg2023-Wolf.pdf">[slides]</a> -->
 	  <!-- <a target="_blank" href="https://www.youtube.com/watch?v=z_mqApVbYZM">[video]</a> -->
-	  </br><a href="#sylvester">TBA</a></td>
+	  </br><a href="#sylvester">Temporal exploration of random spanning tree models</a></td>
     </tr>
     <tr>
       <td class="tg-pesd">10:00-10:30</td>
@@ -299,7 +299,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	  <td class="tg-pesd"><a target="_blank" href="https://www.unifi.it/p-doc2-2019-0-A-2d2a39323a2f-1.html"><strong>Andrea Marino</strong></a> (University of Florence, Italy)
 	  <!-- <a target="_blank" href="./Workshop-Slides/slides-aatg2023-Wolf.pdf">[slides]</a> -->
 	  <!-- <a target="_blank" href="https://www.youtube.com/watch?v=z_mqApVbYZM">[video]</a> -->
-	  </br><a href="#marino">TBA</a></td>
+	  </br><a href="#marino">On computing large temporal (unilateral) connected components</a></td>
     </tr>
 	
 	
@@ -328,7 +328,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	  <td class="tg-pesd"><a target="_blank" href="https://hpi.de/friedrich/people/george-skretas.html"><strong>George Skretas</strong></a> (Hasso Plattner Institute, Potsdam, Germany)
 	  <!-- <a target="_blank" href="./Workshop-Slides/slides-aatg2023-Wolf.pdf">[slides]</a> -->
 	  <!-- <a target="_blank" href="https://www.youtube.com/watch?v=z_mqApVbYZM">[video]</a> -->
-	  </br><a href="#skretas">TBA</a></td>
+	  </br><a href="#skretas">How to reduce temporal cliques to find sparse spanners</a></td>
     </tr>
 	
 	
@@ -350,7 +350,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	  <td class="tg-pesd"><a target="_blank" href="https://networks.imdea.org/team/imdea-networks-team/people/antonio-fernandez-anta/"><strong>Antonio Fernandez Anta</strong></a> (IMDEA Networks Institute, Madrid, Spain)
 	  <!-- <a target="_blank" href="./Workshop-Slides/slides-aatg2023-Wolf.pdf">[slides]</a> -->
 	  <!-- <a target="_blank" href="https://www.youtube.com/watch?v=z_mqApVbYZM">[video]</a> -->
-	  </br><a href="#fernandez-anta">TBA</a></td>
+	  </br><a href="#fernandez-anta">Nowcasting temporal trends using indirect surveys</a></td>
     </tr>
   </table>
   </ul>
@@ -389,11 +389,25 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<li style="margin-bottom:-0.3cm" id="sylvester"><p style="font-size:20px"><strong>John Sylvester</strong> (University of Liverpool, UK) <br>
 	</p>
-    <p style="font-size:20px"><strong>TBA</strong></p>
+    <p style="font-size:20px"><strong>Temporal exploration of random spanning tree models</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	TBA
+	In this talk we will consider the temporal exploration problem (TEXP) on two random models of temporal graphs which are connected 
+	in each time step. TEXP asks for a walk in a given temporal graph that visits all vertices, and which finishes at the earliest time 
+	amongst all such walks. It is known that there are $n$-vertex temporal graphs which require \Omega(n^2) steps to explore, 
+	our aim is to explore what happens against a random adversary.<br><br>
+	
+	In the first model an adversary supplies a measure \mu supported on a set of (labelled) spanning trees of a static graph G, 
+	and we obtain a (random) temporal graph by sampling a spanning tree from \mu at each time step. 
+	We show that, for any pair (\mu, G), there is a schedule which explores the corresponding temporal graph in expected time O(|E(G)|). 
+	Furthermore we provide an example of pair (\mu, G) which require a super-linear number of steps to explore in expectation.<br><br>
+	
+	The second model we consider is an unlabeled variant of the first, where an adversary supplies a set S of n-vertex trees and each step 
+	is a uniform random permutation of a tree from S. We show that, for any set S, with high probability the time to explore the corresponding 
+	temporal graph lies between \Omega(n) and O(n\log n), and we provide instances where both bounds are tight.<br><br>
+	
+	This is joint work with Samuel Baguley, Andreas Göbel, Nicolas Klodt, George Skretas and Viktor Zamaraev.
 	</i></p></li>
 	
 	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
@@ -463,11 +477,23 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<li style="margin-bottom:-0.3cm" id="marino"><p style="font-size:20px"><strong>Andrea Marino</strong> (University of Florence, Italy) <br>
 	</p>
-    <p style="font-size:20px"><strong>TBA</strong></p>
+    <p style="font-size:20px"><strong>On computing large temporal (unilateral) connected components</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	TBA
+	A temporal (directed) graph is a graph whose edges are available only at specific times during its lifetime, \tau. 
+	Paths are sequences of adjacent edges whose appearing times are either strictly increasing or non-strictly increasing 
+	(i.e., non-decreasing), depending on the scenario. The classical concept of connected components and also of unilateral 
+	connected components in static graphs naturally translate to temporal graphs in several non-equivalent ways.<br><br>
+	
+	In this talk, we adress the following fundamental questions in temporal graphs. (i) What is the complexity of deciding 
+	the existence of a component of size k, parameterized by \tau, by k, and by k+\tau? We show that this question 
+	has a different answer depending on the considered definition of component and whether the temporal graph is 
+	directed or undirected. (ii) What is the minimum running time required to check whether a subset of vertices are pairwise reachable? 
+	A quadratic-time algorithm is known but, contrarily to the static case, a better running time is unlikely unless SETH fails. 
+	(iii) Is it possible to verify whether a subset of vertices is a component in polynomial time? We show that depending on the 
+	definition of temporal component this test is NP-complete. 
+
 	</i></p></li>
 	
 	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
@@ -514,11 +540,24 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<li style="margin-bottom:-0.3cm" id="skretas"><p style="font-size:20px"><strong>George Skretas</strong> (Hasso Plattner Institute, Potsdam, Germany) <br>
 	</p>
-    <p style="font-size:20px"><strong>TBA</strong></p>
+    <p style="font-size:20px"><strong>How to reduce temporal cliques to find sparse spanners</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	TBA
+	Many real-world networks, like transportation networks and social networks, are dynamic in the sense that the edge set may change over time, 
+	but these changes are known in advance. This behavior is captured by the temporal graphs model, which has recently become a trending topic in 
+	theoretical computer science. A core open problem in the field is to prove the existence of linear-size temporal spanners in temporal cliques, 
+	i.e., sparse subgraphs of complete temporal graphs that ensure all-pairs reachability via temporal paths. So far, the best-known result is the 
+	existence of temporal spanners with O(n log n) many edges. We present significant progress towards proving that linear-size temporal spanners 
+	exist in all temporal cliques.<br><br>
+	
+	We adapt techniques used in previous works and heavily expand and generalize them. This allows to show that the existence of a linear spanner 
+	in cliques and bi-cliques is equivalent and also provide a simpler and more intuitive proof of the O(n log n) bound. Moreover, we use our novel 
+	approach to show that a large class of temporal cliques, called edge-pivotable graphs, admit linear-size temporal spanners. To contrast this, 
+	we investigate other classes of temporal cliques that do not belong to the class of edge-pivotable graphs. We introduce two such graph classes 
+	and we develop novel techniques for establishing the existence of linear temporal spanners in these graph classes as well.<br><br>
+	
+	Joint work with: Sebastian Angrick, Ben Bals, Hans Gawendowicz, Niko Hastrich, Nicolas Klodt, Pascal Lenzer, Jonas Schmidt and Armin Wells.
 	</i></p></li>
 	
 	<hr size="0.5" width="100%" style="margin-bottom: 40px;margin-top: 40px;">
@@ -555,11 +594,35 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<li style="margin-bottom:-0.3cm" id="fernandez-anta"><p style="font-size:20px"><strong>Antonio Fernandez Anta</strong> (IMDEA Networks Institute, Madrid, Spain) <br>
 	</p>
-    <p style="font-size:20px"><strong>TBA</strong></p>
+    <p style="font-size:20px"><strong>Nowcasting temporal trends using indirect surveys</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	TBA
+	Indirect surveys, in which respondents provide information about other people
+they know, have been proposed for estimating (nowcasting) the size of a <it>hidden population</it> 
+where privacy is important or the hidden population is hard to reach.
+Examples include estimating casualties in an earthquake, conditions among fe-
+male sex workers, and the prevalence of drug use and infectious diseases. The
+Network Scale-up Method (NSUM) is the classical approach to developing esti-
+mates from indirect surveys, but it was designed for one-shot surveys. Further, it
+requires certain assumptions and asking for or estimating the number of individ-
+uals in each respondent’s network. In recent years, surveys have been increasingly
+deployed online and can collect data continuously (e.g., COVID-19 surveys on
+Facebook during much of the pandemic). Conventional NSUM can be applied to
+these scenarios by analyzing the data independently at each point in time, but
+this misses the opportunity of leveraging the temporal dimension. We propose to
+use the responses from indirect surveys collected over time and develop analyti-
+cal tools (i) to prove that indirect surveys can provide better estimates for the
+trends of the hidden population over time, as compared to direct surveys and
+(ii) to identify appropriate temporal aggregations to improve the estimates. We
+demonstrate through extensive simulations that our approach outperforms tra-
+ditional NSUM and direct surveying methods. We also empirically demonstrate
+the superiority of our approach on a real indirect survey dataset of COVID-19
+cases.<br><br>
+
+This is a joint work of Ajitesh Srivastava, Juan Marcos Ramirez, Sergio Dıaz-Aranda, Jose Aguilar, 
+Antonio Fernandez Anta, Antonio Ortega, and Rosa E. Lillo. 
+Part of project TED2021-131264B-I00 (SocialProbing) funded by MCIN/AEI/10.13039/501100011033/ and the European Union-NextGenerationEU/PRTR.
 	</i></p></li>
 	
 
