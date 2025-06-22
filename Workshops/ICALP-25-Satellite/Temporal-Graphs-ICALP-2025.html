@@ -129,13 +129,12 @@ Presentations are given by invitation only. Everyone is welcome to register and 
   
   
 
-   <!-- <strong style="color:red;background-color:yellow">NEW:</strong> -->
-   
    
    For those who cannot attend in person, the meeting will also be hosted on Teams.<br><br> 
    
    <!--
-   For the Teams link, 
+   <strong style="color:red;background-color:yellow">NEW:</strong>
+   The Teams link is: 
    <a target="_blank" style="color:#FF0000" href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NGE5ZTFlNWMtOGVhMy00YjRkLWIxZWItNGQ4MWQxOGZiMzM0%40thread.v2/0?context=%7b%22Tid%22%3a%227250d88b-4b68-4529-be44-d59a2d8a6f94%22%2c%22Oid%22%3a%22f7957169-ae69-41b9-9326-6ca761d74d05%22%7d"><strong>click here</strong></a>.
    (Meeting ID: 374 640 648 711 9, Passcode: CY29Zf7J)
   <br><br>
@@ -345,10 +344,10 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
     </tr>
     <tr>
       <td class="tg-pesd">16:30-17:00</td>
-	  <td class="tg-pesd"><a target="_blank" href="https://lutzoe.github.io/"><strong>Lutz Oettershagen</strong></a> (University of Liverpool, UK)
+	  <td class="tg-pesd"><a target="_blank" href="https://iliesarpe.github.io/"><strong>Ilie Sarpe</strong></a> (KTH, Sweden)
 	  <!-- <a target="_blank" href="./Workshop-Slides/slides-aatg2023-Wolf.pdf">[slides]</a> -->
 	  <!-- <a target="_blank" href="https://www.youtube.com/watch?v=z_mqApVbYZM">[video]</a> -->
-	  </br><a href="#oettershagen">An edge-based decomposition framework for temporal networks</a></td>
+	  </br><a href="#sarpe">Scalable temporal motif densest subnetwork discovery</a></td>
     </tr>
   </table>
   </ul>
@@ -548,23 +547,25 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	
 	
-	<li style="margin-bottom:-0.3cm" id="oettershagen"><p style="font-size:20px"><strong>Lutz Oettershagen</strong> (University of Liverpool, UK) <br>
+	<li style="margin-bottom:-0.3cm" id="sarpe"><p style="font-size:20px"><strong>Ilie Sarpe</strong> (KTH, Sweden) <br>
 	</p>
-    <p style="font-size:20px"><strong>An edge-based decomposition framework for temporal networks</strong></p>
+    <p style="font-size:20px"><strong>Scalable temporal motif densest subnetwork discovery</strong></p>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	A temporal network is a dynamic graph where every edge is assigned an integer time label that indicates at which discrete time step the edge 
-	is available. We consider the problem of hierarchically decomposing the network and introduce an edge-based decomposition framework that unifies 
-	the core and truss decompositions for temporal networks while allowing us to consider the network's temporal dimension. 
-	Based on our new framework, we introduce the \((k,\Delta)\)-core and \((k,\Delta)\)-truss decompositions, which are generalizations of the 
-	classic \(k\)-core and \(k\)-truss decompositions for multigraphs. Moreover, we show how \((k,\Delta)\)-cores and \((k,\Delta)\)-trusses can be efficiently 
-	further decomposed to obtain spatially and temporally connected components. We evaluate the characteristics of our new decompositions 
-	and the efficiency of our algorithms. Moreover, we demonstrate how our \((k,\Delta)\)-decompositions can be applied to analyze malicious content 
-	in a Twitter network to obtain insights that state-of-the-art baselines cannot obtain.<br><br>
+	Finding dense subnetworks, with density based on edges or more complex structures, such as subgraphs or $k$-cliques, 
+	is a fundamental algorithmic problem with many applications. While the problem has been studied extensively in static networks, 
+	much remains to be explored for temporal networks. 
+	In this work we introduce the novel problem of identifying the temporal motif densest subnetwork, i.e., the densest subnetwork 
+	with respect to temporal motifs, which are high-order patterns characterizing temporal networks. Identifying temporal motifs is 
+	an extremely challenging task, and thus, efficient methods are required to compute the temporal motif densest subnetwork. 
+	To address this challenge, we design two novel randomized greedy approximation algorithms with rigorous probabilistic guarantees 
+	that provide high-quality solutions. We perform extensive experiments showing that our methods outperform baselines based on 
+	state-of-the-art approaches for an analogous static problem. Furthermore, our algorithms scale on networks with up to billions 
+	of temporal edges, while baselines cannot handle such large networks. We use our techniques to analyze a financial network and 
+	show that our formulation reveals important network structures.<br><br>
 	
-	This is a joint work with Athanasios L. Konstantinidis and Giuseppe F. Italiano, published at ACM International Conference on Web Search 
-	and Data Mining (WSDM), 2025.<br><br>
+	This is joint work with Fabio Vandin and Aristides Gionis [KDD 2024].<br><br>
 	
 	</i></p></li>
 	
