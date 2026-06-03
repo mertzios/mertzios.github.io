@@ -3,8 +3,8 @@
 
 <head>
   <title>Algorithmic Aspects of Temporal Graphs IX -- ICALP 2026 workshop</title>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 </head>
-
 
 <body style="max-width: 75%; margin: auto;">
 
@@ -369,21 +369,21 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	Modern networks are highly dynamic, and temporal graphs capture these changes through discrete edge appearances 
 	on a fixed vertex set, known in advance up to the graph's lifetime. The Vertex Cover problem extends to the temporal 
 	setting as Temporal Vertex Cover (TVC) and Sliding Window Temporal Vertex Cover (SW-TVC). In TVC, each edge is covered 
-	by one endpoint over the lifetime, while in SW-TVC, edges are covered within every  \Delta-step window. 
+	by one endpoint over the lifetime, while in SW-TVC, edges are covered within every  \(\Delta\)-step window. 
 	In always star temporal graphs, each snapshot is a star with a center that may change at each time step. 
-	TVC is NP-complete on always star temporal graphs, but an FPT algorithm parameterized by  \Delta solves it 
-	optimally in  O(T \Delta (n+m) . 2 \Delta).<br><br>
+	TVC is NP-complete on always star temporal graphs, but an FPT algorithm parameterized by  \(\Delta\) solves it 
+	optimally in  \(O(T \Delta (n+m) \cdot 2 \Delta)\).<br><br>
 	
 	This paper presents two polynomial-time approximation algorithms for SW-TVC on always star temporal graphs, 
-	achieving  2\Delta-1 and  \Delta-1 approximation ratios with running times  O(T) and O(Tm \Delta^2), respectively. 
-	These algorithms provide exact solutions for  \Delta=1 and \Delta <= 2. Additionally, we offer the first 
-	implementation and experimental evaluation of state-of-the-art approximation algorithms with d and d-1 approximation 
+	achieving  \(2\Delta-1\) and  \(\Delta-1\) approximation ratios with running times  \(O(T)\) and \(O(Tm \Delta^2)\), respectively. 
+	These algorithms provide exact solutions for  \(\Delta=1\) and \(\Delta <= 2\). Additionally, we offer the first 
+	implementation and experimental evaluation of state-of-the-art approximation algorithms with \(d\) and \(d-1\) approximation 
 	ratios, where d is the maximum degree of any snapshot. Our experiments on artificially generated always star temporal 
 	graphs show that the new approximation algorithms outperform the known d-1 approximation in running time, 
-	even in some cases where \Delta > d. We test state-of-the-art algorithms on real-world data and observe that 
-	the d-1 approximation algorithm outperforms the analytically better d approximation algorithm in running time 
-	when implemented as described in the original paper. However, a novel implementation of the d approximation 
-	algorithm significantly improves its runtime, surpassing  d-1 in practice. Nonetheless, the d-1 approximation 
+	even in some cases where \(\Delta > d\). We test state-of-the-art algorithms on real-world data and observe that 
+	the \(d-1\) approximation algorithm outperforms the analytically better d approximation algorithm in running time 
+	when implemented as described in the original paper. However, a novel implementation of the \(d\) approximation 
+	algorithm significantly improves its runtime, surpassing  \(d-1\) in practice. Nonetheless, the \(d-1\) approximation 
 	consistently computes smaller solutions.
 
 	
@@ -399,19 +399,19 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	A role colouring of a graph $G$ is an assignment of colours to the vertices of $G$ such that two vertices of the 
-	same colour have identical sets of colours in their neighbourhoods. For a fixed graph $R$ the $R$-role colouring 
-	problem asks whether $G$ has a role colouring that is consistent with the adjacencies of $R$. More formally, it asks 
-	if there exists a vertex mapping $r: V(G) \rightarrow V(R)$, such that $r(N_G(u))=N_R(r(u))$ for all $u \in V(G)$.<br><br>
+	A role colouring of a graph \(G\) is an assignment of colours to the vertices of \(G\) such that two vertices of the 
+	same colour have identical sets of colours in their neighbourhoods. For a fixed graph \(R\) the \(R\)-role colouring 
+	problem asks whether \(G\) has a role colouring that is consistent with the adjacencies of \(R\). More formally, it asks 
+	if there exists a vertex mapping \(r: V(G) \rightarrow V(R)\), such that \(r(N_G(u))=N_R(r(u))$ for all $u \in V(G)\).<br><br>
 	
-	We define an extension of the $R$-role colouring problem to temporal graphs. Temporal roles are defined via an automaton 
+	We define an extension of the \(R\)-role colouring problem to temporal graphs. Temporal roles are defined via an automaton 
 	with states capturing both the current colour of a vertex and information about its temporal adjacencies. Transitions 
-	between these states are labelled with subsets of colours: allowing a vertex $v$ to move to a new state at time $t$ along 
-	an arc labelled with the colours $C'$ if the set of colours appearing on neighbours of $v$ at time $t$ is precisely $C'$. 
-	For a given automaton $A$ and temporal graph $\mathcal{G}$ the $A$-role colouring problem asks if there is a colouring 
-	of $\mathcal{G}$ where every vertex has an accepting path through the automaton.<br><br>
+	between these states are labelled with subsets of colours: allowing a vertex \(v\) to move to a new state at time \(t\) along 
+	an arc labelled with the colours \(C'\) if the set of colours appearing on neighbours of \(v\) at time \(t\) is precisely \(C'\). 
+	For a given automaton \(A\) and temporal graph \(\mathcal{G}\) the \(A\)-role colouring problem asks if there is a colouring 
+	of \(\mathcal{G}\) where every vertex has an accepting path through the automaton.<br><br>
 	
-	We show, by a reduction from the static problem, that the $A$-role colouring problem is NP-complete. To contend 
+	We show, by a reduction from the static problem, that the \(A\)-role colouring problem is NP-complete. To contend 
 	with this intractability, we explore parameters where this problem can be solved more efficiently. We give fpt 
 	results with respect to each of: the vertex-interval-membership width of the temporal graph, the tree-interval-membership 
 	width of the temporal graph, and the treewidth of the underlying graph, each in combination with the number of states of the automaton.
@@ -453,7 +453,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	Temporal graphs are graphs whose edges are only present at certain points in time. Reachability in these graphs relies 
 	on temporal paths, where edges are traversed chronologically. A temporal graph that offers all-pairs reachability is said 
 	to be temporally connected (or TC). For temporal graphs that are not TC, a natural question is whether they admit a TC subgraph 
-	(a.k.a. closed temporal component) of a given size k. This question was one of the earliest in the field, shown to be NP-hard 
+	(a.k.a. closed temporal component) of a given size \(k\). This question was one of the earliest in the field, shown to be NP-hard 
 	by Bhadra and Ferreira in 2003.<br><br>
 	
 	We strengthen this result dramatically, showing that deciding if a TC subgraph exists on at least 3 vertices is 
@@ -462,11 +462,11 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	(where temporal paths can travel outside the component), for which inclusion-maximal components can be found in polynomial time.<br><br>
 	
 	As a by-product, our reductions strengthen a number of existing results and establish new derived results. They imply 
-	that the size of the largest TC subgraph cannot be approximated within a factor of (1-\epsilon)n in directed graphs, 
-	and within a factor of (1-\epsilon)n/2 in undirected graphs.<br><br>
+	that the size of the largest TC subgraph cannot be approximated within a factor of \((1-\epsilon)n\) in directed graphs, 
+	and within a factor of \((1-\epsilon)n/2\) in undirected graphs.<br><br>
 	
-	One of the reductions also completes the complexity landscape for TC subgraphs of size exactly k when parameterized 
-	by k (answering the missing non-strict case). Finally, on the structural side, our results imply that there exist 
+	One of the reductions also completes the complexity landscape for TC subgraphs of size exactly \(k\) when parameterized 
+	by \(k\) (answering the missing non-strict case). Finally, on the structural side, our results imply that there exist 
 	arbitrarily large TC graphs of constant lifetime without nontrivial TC subgraphs, and we also show that there exist TC graphs 
 	of arbitrary girth, both facts being of independent interest.<br><br>
 	
@@ -512,13 +512,13 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	<p style="font-size:20px"> <strong>Abstract:</strong> 
 	<i>
-	A temporal graph G is a sequence of graphs G1, G2, ... , Gt on the same vertex set. In this talk, we are interested in 
+	A temporal graph G is a sequence of graphs \(G_1, G_2, ... , G_t\) on the same vertex set. In this talk, we are interested in 
 	the analogue of the Travelling Salesman Problem for temporal graphs. It is referred to in the literature as the Temporal 
 	Exploration Problem, and asks for the minimum length of an exploration of the graph, that is, a sequence of vertices such 
-	that at each time step t, one either stays at the same vertex or moves along a single edge of Gt.<br><br>
+	that at each time step \(t\), one either stays at the same vertex or moves along a single edge of \(G_t\).<br><br>
 	
-	One natural and still open case is when each graph Gt is connected and has bounded maximum degree. We present a 
-	short proof that any such graph admits an exploration in O(n^(3/2) log n^(1/2)) time steps. In fact, we deduce 
+	One natural and still open case is when each graph \(G_t\) is connected and has bounded maximum degree. We present a 
+	short proof that any such graph admits an exploration in \(O(n^{3/2} log n^{1/2})\) time steps. In fact, we deduce 
 	this result from a more general statement by introducing the notion of average temporal maximum degree. 
 	This more general statement improves the previous best bounds, under a unified approach, for several studied exploration problems.<br><br>
 	
