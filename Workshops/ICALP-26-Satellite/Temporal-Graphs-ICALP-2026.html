@@ -378,11 +378,12 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	
 	This paper presents two polynomial-time approximation algorithms for SW-TVC on always star temporal graphs, 
 	achieving  \(2\Delta-1\) and  \(\Delta-1\) approximation ratios with running times  \(O(T)\) and \(O(Tm \Delta^2)\), respectively. 
-	These algorithms provide exact solutions for  \(\Delta=1\) and \(\Delta <= 2\). Additionally, we offer the first 
-	implementation and experimental evaluation of state-of-the-art approximation algorithms with \(d\) and \(d-1\) approximation 
-	ratios, where d is the maximum degree of any snapshot. Our experiments on artificially generated always star temporal 
-	graphs show that the new approximation algorithms outperform the known d-1 approximation in running time, 
-	even in some cases where \(\Delta > d\). We test state-of-the-art algorithms on real-world data and observe that 
+	These algorithms provide exact solutions for  \(\Delta=1\) and \(\Delta <= 2\). 
+	Additionally, we offer the first 	implementation and experimental evaluation of state-of-the-art approximation algorithms 
+	with \(d\) and \(d-1\) approximation 	ratios, where d is the maximum degree of any snapshot. Our experiments on artificially generated 
+	always star temporal 	graphs show that the new approximation algorithms outperform the known d-1 approximation in running time, 
+	even in some cases where \(\Delta > d\). 
+	We test state-of-the-art algorithms on real-world data and observe that 
 	the \(d-1\) approximation algorithm outperforms the analytically better d approximation algorithm in running time 
 	when implemented as described in the original paper. However, a novel implementation of the \(d\) approximation 
 	algorithm significantly improves its runtime, surpassing  \(d-1\) in practice. Nonetheless, the \(d-1\) approximation 
@@ -404,7 +405,7 @@ Please look for the room 'Avogadro F' on the 2nd floor of the building. <br><br>
 	A role colouring of a graph \(G\) is an assignment of colours to the vertices of \(G\) such that two vertices of the 
 	same colour have identical sets of colours in their neighbourhoods. For a fixed graph \(R\) the \(R\)-role colouring 
 	problem asks whether \(G\) has a role colouring that is consistent with the adjacencies of \(R\). More formally, it asks 
-	if there exists a vertex mapping \(r: V(G) \rightarrow V(R)\), such that \(r(N_G(u))=N_R(r(u))$ for all $u \in V(G)\).<br><br>
+	if there exists a vertex mapping \(r: V(G) \rightarrow V(R)\), such that \(r(N_G(u))=N_R(r(u))\) for all \(u \in V(G)\).<br><br>
 	
 	We define an extension of the \(R\)-role colouring problem to temporal graphs. Temporal roles are defined via an automaton 
 	with states capturing both the current colour of a vertex and information about its temporal adjacencies. Transitions 
